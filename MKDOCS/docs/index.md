@@ -6,11 +6,11 @@
 
 | Campo | Información |
 |---|---|
-| **Nombre** | ______________________________ |
-| **Equipo** | ______________________________ |
+| **Nombre** | Jannys Graciela Navarro Acrota |
+| **Equipo** | Sin equipo :( |
 | **Sesión** | S01 - Construcción de un servicio base para un sistema distribuido |
 | **Rol o aporte realizado** | Replicación autónoma del patrón de `pagatu-catalogo-ms` en `pagatu-orden-ms`. |
-| **Link de GitHub** | ______________________________ |
+| **Link de GitHub** | https://github.com/Stephmarc |
 
 > **Actividad:** replicación autónoma del patrón de `pagatu-catalogo-ms` en otro microservicio del dominio, `orden-ms`.
 
