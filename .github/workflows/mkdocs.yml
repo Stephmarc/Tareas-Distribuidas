@@ -32,6 +32,7 @@ jobs:
         run: pip install mkdocs-material
 
       - name: Build MkDocs
+        working-directory: MKDOCS
         run: mkdocs build --strict
 
       - name: Setup GitHub Pages
@@ -40,7 +41,7 @@ jobs:
       - name: Upload site
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./site
+          path: ./MKDOCS/site
 
       - name: Deploy to GitHub Pages
         id: deployment
