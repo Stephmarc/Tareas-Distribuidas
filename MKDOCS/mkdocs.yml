@@ -1,0 +1,15 @@
+site_name: "S01 - Evidencia individual - pagatu-orden-ms"
+site_description: "Actividad autónoma S01: replicación del patrón de pagatu-catalogo-ms en pagatu-orden-ms"
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
