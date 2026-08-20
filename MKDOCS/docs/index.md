@@ -304,8 +304,6 @@ Un microservicio debe poder ejecutarse de forma reproducible en DEV y PROD local
 
 ## 7. Anexo — Feedback de la sesión
 
-> **Importante:** esta sección debe reflejar tus respuestas personales. Las respuestas siguientes son un borrador para que lo adaptes antes de entregar.
-
 ### 1. ¿Cuál es el aprendizaje más importante que te llevas de la clase de hoy?
 Aprendí a replicar el patrón de un microservicio completo, conectándolo a PostgreSQL con Flyway y comprobando su funcionamiento mediante REST, Swagger y Actuator.
 
@@ -316,14 +314,14 @@ La diferencia entre ejecutar varias instancias en DEV con puertos distintos y ma
 ¿Cómo se incorpora el Gateway para distribuir automáticamente las peticiones entre las diferentes instancias del microservicio?
 
 ### 4. Nivel de comprensión
-**¡Entendido! — Lo domino y podría explicarlo.**
+**Entendible, sufri con algunos componentes pero pude reparar los errores gracias a la guia**
 
 ### 5. ¿Cómo puedo ayudarte a comprender mejor el tema?
 Con ejemplos donde se vea el recorrido de una petición desde el cliente hasta el microservicio y posteriormente hacia varias instancias.
 
 ### 6. Autoevaluación
-**Muy Comprometido/a: Me esforcé al máximo.**
+**Di lo mejor que pude XDDD.**
 
 ### 7. Satisfacción
-**9/10.** La actividad permitió comprobar de forma práctica la construcción, persistencia, observabilidad y escalamiento de un microservicio.
+**8/10.** La actividad permitió comprobar de forma práctica la construcción, persistencia, observabilidad y escalamiento de un microservicio, además que gracias a la guia entendíble pude avanzar con mas facilidad
 
