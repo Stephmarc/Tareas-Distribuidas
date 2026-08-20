@@ -327,7 +327,3 @@ Con ejemplos donde se vea el recorrido de una petición desde el cliente hasta e
 ### 7. Satisfacción
 **9/10.** La actividad permitió comprobar de forma práctica la construcción, persistencia, observabilidad y escalamiento de un microservicio.
 
-## 8. Nota de control de evidencia
-
-
-La guía establece que cada captura debe conservar visible, sin recortar, el reloj del sistema y el usuario o foto de perfil. Antes de entregar, verifica esta condición en las capturas originales. No se debe agregar artificialmente una fecha/hora o perfil que no aparezca en la captura real.
