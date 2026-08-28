@@ -26,12 +26,15 @@ springdoc:
   api-docs:
     enabled: false
 
+logging:
+  level:
+    pe.edu.upeu.orden: INFO
+
 management:
   endpoints:
     web:
       exposure:
         include: health,info,metrics
-
   endpoint:
     health:
       show-details: never

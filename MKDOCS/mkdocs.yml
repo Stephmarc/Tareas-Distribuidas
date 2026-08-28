@@ -1,5 +1,6 @@
-site_name: "S01 - Evidencia individual - pagatu-orden-ms"
-site_description: "Actividad autónoma S01: replicación del patrón de pagatu-catalogo-ms en pagatu-orden-ms"
+site_name: "Evidencias - Sistemas Distribuidos"
+site_description: "Evidencias individuales de las sesiones del curso de Sistemas Distribuidos"
+
 theme:
   name: material
   language: es
@@ -7,6 +8,11 @@ theme:
     - navigation.sections
     - navigation.top
     - toc.integrate
+
+nav:
+  - S01 - Evidencia individual: index.md
+  - S02 - Configuración centralizada: S02/index.md
+
 markdown_extensions:
   - admonition
   - attr_list
