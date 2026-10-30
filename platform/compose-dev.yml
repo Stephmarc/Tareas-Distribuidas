@@ -118,4 +118,3 @@ volumes:
   pago-data:
   keycloak-data:
   kafka-data:
-
