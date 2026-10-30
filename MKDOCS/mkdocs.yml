@@ -1,4 +1,4 @@
-site_name: "Distribuidas · Jannys Navarro"
+site_name: "Tarea personal · Jannys Navarro"
 site_description: "Trabajo individual · Casa o Nada"
 site_author: Jannys Graciela Navarro Acrota
 repo_url: https://github.com/Stephmarc/Tareas-Distribuidas
@@ -24,13 +24,11 @@ nav:
       - Presentación: Unidad2/index.md
       - S06 · Comunicación síncrona resiliente: Unidad2/S06/index.md
       - S07 · Seguridad distribuida y control de acceso: Unidad2/S07/index.md
-      - S07b · Keycloak: Unidad2/S07/keycloak.md
       - S08 · Mensajería asíncrona entre servicios: Unidad2/S08/index.md
       - S09 · Consistencia distribuida en procesos de negocio: Unidad2/S09/index.md
       - S10 · Observabilidad y diagnóstico: Unidad2/S10/index.md
       - S11 · Integración del cliente Angular con Keycloak: Unidad2/S11/index.md
-      - Verificación: Unidad2/verificacion.md
-      - Feedback personal: Unidad2/feedback.md
+      - Pruebas realizadas: Unidad2/verificacion.md
 markdown_extensions:
   - admonition
   - attr_list

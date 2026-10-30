@@ -1,0 +1,40 @@
+{
+  "fecha": "2026-10-30T02:42:47.052Z",
+  "cuenta": "service-account-verificacion-local",
+  "results": [
+    {
+      "name": "catalogo",
+      "status": "OK",
+      "registros": 1
+    },
+    {
+      "name": "ordenes",
+      "status": "OK",
+      "registros": 0
+    },
+    {
+      "name": "sin-token",
+      "status": 401
+    },
+    {
+      "name": "firma-alterada",
+      "status": 401
+    },
+    {
+      "name": "crear-orden-YAPE_PLIN",
+      "id": 1,
+      "estado": "PENDIENTE_PAGO",
+      "total": 31
+    },
+    {
+      "name": "crear-orden-RECHAZADO",
+      "id": 2,
+      "estado": "PENDIENTE_PAGO",
+      "total": 31
+    },
+    {
+      "name": "cliente-sin-rol-admin",
+      "status": 403
+    }
+  ]
+}

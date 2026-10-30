@@ -42,6 +42,8 @@ public class SecurityConfiguration {
       .csrf(c -> c.disable())
       .authorizeHttpRequests(a ->
         a
+          .dispatcherTypeMatchers(jakarta.servlet.DispatcherType.ERROR)
+          .permitAll()
           .requestMatchers(
             "/api/v1/auth/login",
             "/api/v1/auth/register",

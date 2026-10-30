@@ -1,0 +1,15 @@
+{
+  "fecha": "2026-10-30T02:46:21.702Z",
+  "ordenes": [
+    {
+      "id": 2,
+      "estado": "CANCELADA",
+      "total": 31
+    },
+    {
+      "id": 1,
+      "estado": "PAGADA",
+      "total": 31
+    }
+  ]
+}

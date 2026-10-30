@@ -68,7 +68,16 @@ services:
       - ../keycloak/pagatu-realm.json:/opt/keycloak/data/import/pagatu-realm.json:ro
       - keycloak-data:/opt/keycloak/data
       - ../keycloak/logs:/opt/keycloak/data/log
+  kafka-init:
+    image: apache/kafka:4.3.1
+    user: "0:0"
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["chown -R 1000:1000 /tmp/kraft-combined-logs"]
+    volumes: ["kafka-data:/tmp/kraft-combined-logs"]
   kafka:
+    depends_on:
+      kafka-init:
+        condition: service_completed_successfully
     image: apache/kafka:4.3.1
     ports: ["127.0.0.1:19092:19092"]
     environment:
@@ -109,3 +118,4 @@ volumes:
   pago-data:
   keycloak-data:
   kafka-data:
+

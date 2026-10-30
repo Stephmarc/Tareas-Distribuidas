@@ -1,0 +1,109 @@
+{
+  "fecha": "2026-10-30T03:04:02.664Z",
+  "tipoFallo": "Respuestas 404 reales del catálogo para un producto inexistente. No se detuvo el proceso de catálogo.",
+  "estados": [
+    {
+      "circuitBreakers": {
+        "catalogo": {
+          "bufferedCalls": 5,
+          "failedCalls": 2,
+          "failureRate": "40.0%",
+          "failureRateThreshold": "50.0%",
+          "notPermittedCalls": 0,
+          "slowCallRate": "0.0%",
+          "slowCallRateThreshold": "100.0%",
+          "slowCalls": 0,
+          "slowFailedCalls": 0,
+          "state": "CLOSED"
+        }
+      }
+    },
+    {
+      "circuitBreakers": {
+        "catalogo": {
+          "bufferedCalls": 5,
+          "failedCalls": 3,
+          "failureRate": "60.0%",
+          "failureRateThreshold": "50.0%",
+          "notPermittedCalls": 4,
+          "slowCallRate": "0.0%",
+          "slowCallRateThreshold": "100.0%",
+          "slowCalls": 0,
+          "slowFailedCalls": 0,
+          "state": "OPEN"
+        }
+      }
+    },
+    {
+      "circuitBreakers": {
+        "catalogo": {
+          "bufferedCalls": 0,
+          "failedCalls": 0,
+          "failureRate": "-1.0%",
+          "failureRateThreshold": "50.0%",
+          "notPermittedCalls": 0,
+          "slowCallRate": "-1.0%",
+          "slowCallRateThreshold": "100.0%",
+          "slowCalls": 0,
+          "slowFailedCalls": 0,
+          "state": "HALF_OPEN"
+        }
+      }
+    },
+    {
+      "circuitBreakers": {
+        "catalogo": {
+          "bufferedCalls": 0,
+          "failedCalls": 0,
+          "failureRate": "-1.0%",
+          "failureRateThreshold": "50.0%",
+          "notPermittedCalls": 0,
+          "slowCallRate": "-1.0%",
+          "slowCallRateThreshold": "100.0%",
+          "slowCalls": 0,
+          "slowFailedCalls": 0,
+          "state": "CLOSED"
+        }
+      }
+    }
+  ],
+  "carritos": [
+    {
+      "id": 11,
+      "estado": "CARRITO",
+      "total": null
+    },
+    {
+      "id": 12,
+      "estado": "CARRITO",
+      "total": null
+    },
+    {
+      "id": 13,
+      "estado": "CARRITO",
+      "total": null
+    },
+    {
+      "id": 14,
+      "estado": "CARRITO",
+      "total": null
+    },
+    {
+      "id": 15,
+      "estado": "CARRITO",
+      "total": null
+    }
+  ],
+  "recuperacion": [
+    {
+      "id": 16,
+      "estado": "PENDIENTE_PAGO",
+      "total": 15.5
+    },
+    {
+      "id": 17,
+      "estado": "PENDIENTE_PAGO",
+      "total": 15.5
+    }
+  ]
+}

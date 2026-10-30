@@ -1,4 +1,4 @@
-
+﻿
 param([switch]$SkipBuild,[switch]$Observabilidad)
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path -Parent $PSScriptRoot
@@ -63,10 +63,11 @@ try {
     $nodePath = (Get-Command node).Source
     $nodeVersion = (& $nodePath -p 'process.versions.node')
     if ([version]$nodeVersion -lt [version]'24.15.0') {
-        $nodePath = Join-Path $runtimeDir 'node.exe'
-        if (-not (Test-Path -LiteralPath $nodePath)) {
-            Invoke-WebRequest 'https://nodejs.org/dist/v24.22.2/win-x64/node.exe' -OutFile $nodePath
-            $manifest = (Invoke-WebRequest 'https://nodejs.org/dist/v24.22.2/SHASUMS256.txt').Content
+        $nodePath = Join-Path $runtimeDir 'node24.exe'
+        if (-not (Test-Path -LiteralPath $nodePath) -or (Get-Item -LiteralPath $nodePath).Length -lt 1000000) {
+            & node -e "fetch('https://nodejs.org/dist/v24.22.2/win-x64/node.exe').then(r=>{if(!r.ok)throw Error(r.status);return r.arrayBuffer()}).then(b=>require('fs').writeFileSync(process.argv[1],Buffer.from(b))).catch(e=>{console.error(e.message);process.exit(1)})" $nodePath
+            if ($LASTEXITCODE -ne 0) { throw 'No se pudo descargar Node.' }
+            $manifest = (& node -e "fetch('https://nodejs.org/dist/v24.22.2/SHASUMS256.txt').then(r=>r.text()).then(t=>process.stdout.write(t))") -join [Environment]::NewLine
             $expectedHash = (($manifest -split "`n" | Where-Object { $_ -match ' win-x64/node.exe$' }) -split '\s+')[0]
             if ((Get-FileHash -LiteralPath $nodePath -Algorithm SHA256).Hash -ne $expectedHash) { throw 'El hash del runtime Node no coincide.' }
         }

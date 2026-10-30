@@ -1,26 +1,22 @@
-# Sistemas distribuidos · Casa o Nada
+# Sistemas Distribuidos - tarea personal
 
-Jannys Graciela Navarro Acrota. Continuación del servicio de órdenes existente.
+Jannys Graciela Navarro Acrota. Grupo de referencia: Casa o Nada.
 
-## Documentación
+Esta es la evidencia individual de las sesiones 6 a 11. El informe grupal oficial se elaborara aparte.
 
-[Unidad 2 en MkDocs](MKDOCS/docs/Unidad2/index.md) y [estado de verificación](MKDOCS/docs/Unidad2/verificacion.md). La implementación está preparada; no se considera finalizada la evidencia integral hasta ejecutar los casos documentados.
+La documentacion esta en MKDOCS/docs/Unidad2. Incluye pruebas reales de Feign, Circuit Breaker, JWT/Keycloak, Kafka, compensacion, duplicados, Grafana y Angular.
 
-## Requisitos
+## Ejecutar el proyecto
 
-Java 21, Maven, Docker Desktop con motor Linux y Node compatible con Angular 22 (24.15 o posterior de la rama 24).
-
-## Ejecutar
-
-En PowerShell desde esta carpeta:
+Con Docker Desktop abierto, desde PowerShell en esta carpeta:
 
 ```powershell
 .\scripts\Start-Dev.ps1 -Observabilidad
 ```
 
-El script crea infraestructura con Compose, prueba Java, arranca los JAR y verifica Angular. Las claves locales se guardan en platform/.env, excluido de Git. No elimina volúmenes ni detiene procesos ajenos. Verificar Docker antes de ejecutarlo.
+Se requieren Java 21, Maven y Node compatible con Angular 22. El script prepara un runtime portatil cuando corresponde. Las credenciales locales de desarrollo quedan en platform/.env y platform/runtime, fuera de Git.
 
-## Sitio
+## Documentacion
 
 ```text
 python -m pip install -r requirements-docs.txt
@@ -28,4 +24,4 @@ python -m mkdocs build --strict -f MKDOCS/mkdocs.yml
 python -m mkdocs serve -f MKDOCS/mkdocs.yml
 ```
 
-El workflow existente publica MkDocs al hacer push a main. Su ejecución exitosa debe comprobarse en GitHub Actions; un push por sí solo no confirma el despliegue.
+El workflow publica el sitio al hacer push a main. Los pagos y las cuentas utilizados en las pruebas son de desarrollo.

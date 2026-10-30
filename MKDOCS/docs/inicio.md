@@ -1,14 +1,9 @@
-# Sistemas distribuidos
+# Tarea personal · Sistemas Distribuidos
 
-**Estudiante:** Jannys Graciela Navarro Acrota  
-**Grupo:** Casa o Nada  
-**Repositorio:** [Stephmarc/Tareas-Distribuidas](https://github.com/Stephmarc/Tareas-Distribuidas)  
-**Aporte:** evolución del servicio de órdenes y su integración con infraestructura y servicios separados.
+**Jannys Graciela Navarro Acrota** · Tarea personal de Sistemas Distribuidos.
 
-Documentación individual organizada por unidad.
+Grupo de referencia: Casa o Nada. Esta documentación corresponde al avance individual, no al informe grupal oficial.
 
-- [Unidad 1: revisión y pendientes](Unidad1/auditoria.md).
-- [Unidad 2: sesiones 6 a 11](Unidad2/index.md).
-- [Registro de verificación y límites de la evidencia](Unidad2/verificacion.md).
+[Ver Unidad 2: sesiones 6 a 11](Unidad2/index.md).
 
-Se conservan las capturas y documentos anteriores. Las páginas nuevas diferencian la implementación preparada de los resultados realmente verificados.
+Se conserva el material previo de Unidad 1. Esta presentación reúne el avance individual y sus pruebas reales, de forma breve.

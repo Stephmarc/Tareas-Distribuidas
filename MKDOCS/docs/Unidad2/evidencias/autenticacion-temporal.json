@@ -1,0 +1,24 @@
+{
+  "fecha": "2026-10-30T03:19:23.826Z",
+  "username": "demo-s07-1793330363825",
+  "registro": 201,
+  "loginIncorrecto": 401,
+  "loginCorrecto": 200,
+  "jwt": {
+    "alg": "RS256",
+    "issuer": "http://localhost:8085",
+    "roles": [
+      "CLIENTE"
+    ],
+    "sub": "2"
+  },
+  "clavePublica": {
+    "kty": "RSA",
+    "publicaSinPartePrivada": true
+  },
+  "persistencia": {
+    "username": "demo-s07-1793330363825",
+    "bcrypt": true,
+    "passwordEnTextoPlano": false
+  }
+}
