@@ -1,13 +1,12 @@
 package pe.edu.upeu.orden.dto;
 
+import java.math.BigDecimal;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.math.BigDecimal;
-import java.util.List;
 
 @Getter
 @Setter
@@ -16,11 +15,11 @@ import java.util.List;
 @AllArgsConstructor
 public class OrdenResponse {
 
-    private Long id;
-    private String nombre;
-    private String descripcion;
-    private Long clienteId;
-    private String estado;
-    private BigDecimal total;
-    private List<DetalleOrdenResponse> detalles;
+  private Long id;
+  private String nombre;
+  private String descripcion;
+  private String clienteId;
+  private String estado;
+  private BigDecimal total;
+  private List<DetalleOrdenResponse> detalles;
 }

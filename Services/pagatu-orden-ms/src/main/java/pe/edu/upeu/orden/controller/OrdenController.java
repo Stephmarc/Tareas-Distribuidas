@@ -1,48 +1,59 @@
 package pe.edu.upeu.orden.controller;
 
-import pe.edu.upeu.orden.dto.OrdenRequest;
-import pe.edu.upeu.orden.dto.OrdenResponse;
-import pe.edu.upeu.orden.service.OrdenService;
 import jakarta.validation.Valid;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.server.ResponseStatusException;
+import pe.edu.upeu.orden.dto.*;
+import pe.edu.upeu.orden.service.*;
 
 @RestController
 @RequestMapping("/api/v1/ordenes")
 @RequiredArgsConstructor
 public class OrdenController {
 
-    private final OrdenService ordenService;
+  private final OrdenService service;
+  private final RegistroOrdenService registro;
 
-    @GetMapping
-    public List<OrdenResponse> listar() {
-        return ordenService.listar();
-    }
+  private boolean admin(Jwt jwt) {
+    var a = jwt.getClaimAsMap("realm_access");
+    return (
+      a != null &&
+      ((List<?>) a.getOrDefault("roles", List.of())).contains("ADMIN")
+    );
+  }
 
-    @GetMapping("/{id}")
-    public OrdenResponse obtener(@PathVariable Long id) {
-        return ordenService.obtener(id);
-    }
+  @GetMapping
+  public List<OrdenResponse> listar(@AuthenticationPrincipal Jwt jwt) {
+    return service
+      .listar()
+      .stream()
+      .filter(o -> admin(jwt) || jwt.getSubject().equals(o.getClienteId()))
+      .toList();
+  }
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public OrdenResponse crear(@Valid @RequestBody OrdenRequest request) {
-        return ordenService.crear(request);
-    }
+  @GetMapping("/{id}")
+  public OrdenResponse obtener(
+    @PathVariable Long id,
+    @AuthenticationPrincipal Jwt jwt
+  ) {
+    var o = service.obtener(id);
+    if (
+      !admin(jwt) && !jwt.getSubject().equals(o.getClienteId())
+    ) throw new ResponseStatusException(HttpStatus.FORBIDDEN);
+    return o;
+  }
 
-    @PutMapping("/{id}")
-    public OrdenResponse actualizar(
-            @PathVariable Long id,
-            @Valid @RequestBody OrdenRequest request) {
-        return ordenService.actualizar(id, request);
-    }
-
-    @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void eliminar(@PathVariable Long id) {
-        ordenService.eliminar(id);
-    }
+  @PostMapping
+  @ResponseStatus(HttpStatus.CREATED)
+  public OrdenResponse crear(
+    @Valid @RequestBody CrearOrdenRequest request,
+    @AuthenticationPrincipal Jwt jwt
+  ) {
+    return registro.crear(request, jwt.getSubject());
+  }
 }

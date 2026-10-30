@@ -1,0 +1,33 @@
+name: Verificar Unidad 2
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  java:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - run: mvn -B -ntp verify
+  angular:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: clients/pagatu-frontend
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24.22.2'
+          cache: npm
+          cache-dependency-path: clients/pagatu-frontend/package-lock.json
+      - run: npm ci
+      - run: npm run build

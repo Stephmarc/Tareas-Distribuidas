@@ -1,7 +1,19 @@
 server:
-  port: 8080
+  port: 8082
 
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${KEYCLOAK_ISSUER:http://localhost:18090/realms/pagatu}
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connectTimeout: 2000
+            readTimeout: 3000
   datasource:
     url: jdbc:postgresql://localhost:15433/pagatu_orden_db
     username: pagatu
@@ -46,7 +58,34 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,metrics
+        include: health,info,metrics,prometheus,circuitbreakers,circuitbreakerevents
   endpoint:
     health:
-      show-details: always
+      show-details: when_authorized
+      probes:
+        enabled: true
+      group:
+        liveness:
+          include: livenessState
+        readiness:
+          include: readinessState,db
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      catalogo:
+        register-health-indicator: true
+        sliding-window-size: 5
+        minimum-number-of-calls: 5
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10s
+        permitted-number-of-calls-in-half-open-state: 2
+        automatic-transition-from-open-to-half-open-enabled: true
+
+spring.kafka.bootstrap-servers: ${KAFKA_BOOTSTRAP:localhost:19092}
+spring.kafka.consumer.group-id: pagatu-orden
+spring.kafka.consumer.auto-offset-reset: earliest
+spring.kafka.consumer.key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+spring.kafka.consumer.value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+spring.kafka.producer.key-serializer: org.apache.kafka.common.serialization.StringSerializer
+spring.kafka.producer.value-serializer: org.apache.kafka.common.serialization.StringSerializer

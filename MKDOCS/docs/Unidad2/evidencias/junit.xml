@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JUnit Jupiter" tests="3" skipped="0" failures="0" errors="0" time="13.403" hostname="Stephani" timestamp="2026-10-29T20:48:09">
+<properties/>
+<testcase name="guardaCarritoSinInventarUnTotalCuandoElCatalogoFalla()" classname="pe.edu.upeu.orden.PagatuOrdenMsApplicationTests" time="13.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:pe.edu.upeu.orden.PagatuOrdenMsApplicationTests]/[method:guardaCarritoSinInventarUnTotalCuandoElCatalogoFalla()]
+display-name: guardaCarritoSinInventarUnTotalCuandoElCatalogoFalla()
+]]></system-out>
+</testcase>
+<testcase name="unaSumaParcialNuncaSePublicaComoTotal()" classname="pe.edu.upeu.orden.PagatuOrdenMsApplicationTests" time="0.019">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:pe.edu.upeu.orden.PagatuOrdenMsApplicationTests]/[method:unaSumaParcialNuncaSePublicaComoTotal()]
+display-name: unaSumaParcialNuncaSePublicaComoTotal()
+]]></system-out>
+</testcase>
+<testcase name="calculaElPrecioDelCatalogoYPublicaSoloLaOrdenConfirmada()" classname="pe.edu.upeu.orden.PagatuOrdenMsApplicationTests" time="0.127">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:pe.edu.upeu.orden.PagatuOrdenMsApplicationTests]/[method:calculaElPrecioDelCatalogoYPublicaSoloLaOrdenConfirmada()]
+display-name: calculaElPrecioDelCatalogoYPublicaSoloLaOrdenConfirmada()
+]]></system-out>
+</testcase>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]
+display-name: JUnit Jupiter
+]]></system-out>
+</testsuite>

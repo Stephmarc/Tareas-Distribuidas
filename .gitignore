@@ -1,0 +1,10 @@
+**/target/
+**/logs/
+**/node_modules/
+**/dist/
+**/.angular/
+**/.env
+**/site/
+work/
+*.log
+platform/runtime/

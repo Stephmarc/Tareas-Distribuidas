@@ -1,0 +1,111 @@
+name: pagatu-u2
+services:
+  postgres-catalogo:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: pagatu
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-pagatu}
+      POSTGRES_DB: pagatu_catalogo_db
+    ports: ["127.0.0.1:15432:5432"]
+    volumes: ["catalogo-data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U pagatu -d pagatu_catalogo_db"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  postgres-orden:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: pagatu
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-pagatu}
+      POSTGRES_DB: pagatu_orden_db
+    ports: ["127.0.0.1:15433:5432"]
+    volumes: ["orden-data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U pagatu -d pagatu_orden_db"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  postgres-cliente:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: pagatu
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-pagatu}
+      POSTGRES_DB: pagatu_cliente_db
+    ports: ["127.0.0.1:15434:5432"]
+    volumes: ["cliente-data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U pagatu -d pagatu_cliente_db"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  postgres-pago:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: pagatu
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-pagatu}
+      POSTGRES_DB: pagatu_pago_db
+    ports: ["127.0.0.1:15435:5432"]
+    volumes: ["pago-data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U pagatu -d pagatu_pago_db"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.8.0
+    command: [start-dev, --import-realm]
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD:?Define KEYCLOAK_ADMIN_PASSWORD en platform/.env}
+      KC_HEALTH_ENABLED: "true"
+      KC_METRICS_ENABLED: "true"
+      KC_HTTP_MANAGEMENT_HEALTH_ENABLED: "true"
+      KC_LOG: console,file
+      KC_LOG_FILE: /opt/keycloak/data/log/keycloak.log
+    ports: ["127.0.0.1:18090:8080", "127.0.0.1:19000:9000"]
+    volumes:
+      - ../keycloak/pagatu-realm.json:/opt/keycloak/data/import/pagatu-realm.json:ro
+      - keycloak-data:/opt/keycloak/data
+      - ../keycloak/logs:/opt/keycloak/data/log
+  kafka:
+    image: apache/kafka:4.3.1
+    ports: ["127.0.0.1:19092:19092"]
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://:9092,HOST://:19092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,HOST://localhost:19092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,HOST:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_LOG_DIRS: /tmp/kraft-combined-logs
+    volumes: ["kafka-data:/tmp/kraft-combined-logs"]
+  kafka-ui:
+    image: ghcr.io/kafbat/kafka-ui:v1.5.0
+    ports: ["127.0.0.1:18085:8080"]
+    environment:
+      KAFKA_CLUSTERS_0_NAME: pagatu
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
+    depends_on: [kafka]
+  postgres-auth:
+    profiles: [s07]
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: pagatu
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-pagatu}
+      POSTGRES_DB: pagatu_auth_db
+    ports: ["127.0.0.1:15436:5432"]
+    volumes: ["auth-data:/var/lib/postgresql/data"]
+volumes:
+  auth-data:
+  catalogo-data:
+  orden-data:
+  cliente-data:
+  pago-data:
+  keycloak-data:
+  kafka-data:

@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 5s
+scrape_configs:
+  - job_name: pagatu
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: [host.docker.internal:8080,host.docker.internal:8082,host.docker.internal:8083,host.docker.internal:8084,host.docker.internal:18080]
+  - job_name: keycloak
+    metrics_path: /metrics
+    static_configs:
+      - targets: [host.docker.internal:19000]

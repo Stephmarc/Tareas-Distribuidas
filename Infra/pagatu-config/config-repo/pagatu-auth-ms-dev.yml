@@ -1,0 +1,36 @@
+server:
+  port: 8085
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:15436/pagatu_auth_db}
+    username: ${DB_USER:pagatu}
+    password: ${DB_PASSWORD:pagatu}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:18761/eureka/}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus,metrics
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      group:
+        liveness:
+          include: livenessState
+        readiness:
+          include: readinessState,db
+logging:
+  file:
+    name: logs/cliente.log
+  pattern:
+    level: "%5p [traceId=%X{traceId}]"

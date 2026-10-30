@@ -1,0 +1,29 @@
+name: pagatu-obs
+services:
+  prometheus:
+    image: prom/prometheus:v3.14.0
+    ports: ["127.0.0.1:19090:9090"]
+    volumes: ["./prometheus.yml:/etc/prometheus/prometheus.yml:ro"]
+    extra_hosts: ["host.docker.internal:host-gateway"]
+  loki:
+    image: grafana/loki:3.7.6
+    ports: ["127.0.0.1:13100:3100"]
+    command: [-config.file=/etc/loki/local-config.yaml]
+  promtail:
+    image: grafana/promtail:3.6.8
+    command: [-config.file=/etc/promtail/config.yml]
+    volumes:
+      - ./promtail.yml:/etc/promtail/config.yml:ro
+      - ../Services/pagatu-catalogo-ms/logs:/logs/catalogo:ro
+      - ../Services/pagatu-orden-ms/logs:/logs/orden:ro
+      - ../Services/pagatu-cliente-ms/logs:/logs/cliente:ro
+      - ../Services/pagatu-pago-ms/logs:/logs/pago:ro
+      - ../keycloak/logs:/logs/keycloak:ro
+  grafana:
+    image: grafana/grafana:11.4.0
+    ports: ["127.0.0.1:13000:3000"]
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:?Define GRAFANA_PASSWORD}
+    volumes:
+      - ./provisioning:/etc/grafana/provisioning:ro
+      - ./dashboards:/var/lib/grafana/dashboards:ro

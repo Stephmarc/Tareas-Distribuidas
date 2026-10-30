@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "projects": {
+    "pagatu-frontend": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "src/main.ts",
+            "tsConfig": "tsconfig.json",
+            "index": "src/index.html",
+            "styles": [
+              "src/styles.css"
+            ],
+            "outputPath": "dist/pagatu-frontend"
+          }
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "options": {
+            "buildTarget": "pagatu-frontend:build"
+          }
+        }
+      }
+    }
+  }
+}

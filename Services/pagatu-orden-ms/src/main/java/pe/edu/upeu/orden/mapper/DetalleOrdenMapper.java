@@ -8,11 +8,11 @@ import pe.edu.upeu.orden.entity.DetalleOrden;
 
 @Mapper(componentModel = "spring")
 public interface DetalleOrdenMapper {
+  @Mapping(target = "id", ignore = true)
+  @Mapping(target = "orden", ignore = true)
+  @Mapping(target = "nombreProducto", ignore = true)
+  DetalleOrden toEntity(DetalleOrdenRequest request);
 
-    @Mapping(target = "id", ignore = true)
-    @Mapping(target = "orden", ignore = true)
-    DetalleOrden toEntity(DetalleOrdenRequest request);
-
-    @Mapping(target = "ordenId", source = "orden.id")
-    DetalleOrdenResponse toResponse(DetalleOrden detalleOrden);
+  @Mapping(target = "ordenId", source = "orden.id")
+  DetalleOrdenResponse toResponse(DetalleOrden detalleOrden);
 }

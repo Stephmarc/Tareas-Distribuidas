@@ -1,0 +1,46 @@
+server:
+  port: 18080
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${KEYCLOAK_ISSUER:http://localhost:18090/realms/pagatu}
+  cloud:
+    gateway:
+      server:
+        webflux:
+          globalcors:
+            add-to-simple-url-handler-mapping: true
+            cors-configurations:
+              '[/**]':
+                allowedOrigins: [http://localhost:4200]
+                allowedMethods: [GET,POST,PUT,DELETE,OPTIONS]
+                allowedHeaders: [Authorization,Content-Type,X-Trace-ID]
+                exposedHeaders: [X-Trace-ID]
+          routes:
+            - id: catalogo
+              uri: lb://pagatu-catalogo-ms
+              predicates:
+                - Path=/api/v1/productos/**
+            - id: orden
+              uri: lb://pagatu-orden-ms
+              predicates:
+                - Path=/api/v1/ordenes/**
+            - id: cliente
+              uri: lb://pagatu-cliente-ms
+              predicates:
+                - Path=/api/v1/clientes/**
+            - id: pago
+              uri: lb://pagatu-pago-ms
+              predicates:
+                - Path=/api/v1/pagos/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:18761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus,info

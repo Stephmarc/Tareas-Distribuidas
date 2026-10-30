@@ -1,19 +1,36 @@
-site_name: "Evidencias - Sistemas Distribuidos"
-site_description: "Evidencias individuales de las sesiones del curso de Sistemas Distribuidos"
-
+site_name: "Distribuidas · Jannys Navarro"
+site_description: "Trabajo individual · Casa o Nada"
+site_author: Jannys Graciela Navarro Acrota
+repo_url: https://github.com/Stephmarc/Tareas-Distribuidas
+site_url: https://stephmarc.github.io/Tareas-Distribuidas/
 theme:
   name: material
   language: es
+  palette:
+    primary: teal
+    accent: teal
   features:
     - navigation.sections
     - navigation.top
-    - toc.integrate
-
+    - content.code.copy
 nav:
-  - S01 - Evidencia individual: index.md
-  - S02 - Configuración centralizada: S02/index.md
-  - S03 - Registro y descubrimiento con Eureka: S03/index.md
-
+  - Inicio: inicio.md
+  - Unidad 1:
+      - S01 · Servicio base: index.md
+      - S02 · Configuración centralizada: S02/index.md
+      - S03 · Eureka: S03/index.md
+      - Revisión y pendientes S04–S05: Unidad1/auditoria.md
+  - Unidad 2:
+      - Presentación: Unidad2/index.md
+      - S06 · Comunicación síncrona resiliente: Unidad2/S06/index.md
+      - S07 · Seguridad distribuida y control de acceso: Unidad2/S07/index.md
+      - S07b · Keycloak: Unidad2/S07/keycloak.md
+      - S08 · Mensajería asíncrona entre servicios: Unidad2/S08/index.md
+      - S09 · Consistencia distribuida en procesos de negocio: Unidad2/S09/index.md
+      - S10 · Observabilidad y diagnóstico: Unidad2/S10/index.md
+      - S11 · Integración del cliente Angular con Keycloak: Unidad2/S11/index.md
+      - Verificación: Unidad2/verificacion.md
+      - Feedback personal: Unidad2/feedback.md
 markdown_extensions:
   - admonition
   - attr_list
