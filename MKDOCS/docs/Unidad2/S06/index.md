@@ -16,6 +16,8 @@
 
 Pruebas realizadas el 5 de noviembre de 2026, hora de Lima. Las fechas ISO de los reportes usan UTC y por eso pueden indicar 6 de noviembre. Los IDs, estados y códigos que siguen proceden de las respuestas originales, no de resultados inventados.
 
+Capturas complementarias de VS Code tomadas el 6 de noviembre de 2026, con reloj real y usuario Windows visibles. Muestran código y archivos originales de las pruebas del 5 de noviembre; visualizar un transcript no constituye una nueva ejecución.
+
 ## 1. Orden con configuración externa y Eureka
 
 El servicio de órdenes obtiene su perfil dev del Config Server en 18888 y se registra en Eureka 18761. La prueba consulta ambos endpoints reales; no deduce el registro a partir de que compile.
@@ -352,6 +354,22 @@ Las imágenes se conservan completas, sin superponer resultados ni modificar fec
 ![S06 circuit breaker codigo](assets/S06-circuit-breaker-codigo.jpg)
 
 *S06 circuit breaker codigo. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
+
+![Código real: ProductoClient declara el nombre lógico pagatu-catalogo-ms y la consulta del precio por Feign.](assets/S06-vscode-feign.jpg)
+
+*Código real: ProductoClient declara el nombre lógico pagatu-catalogo-ms y la consulta del precio por Feign.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
+
+![Transcript original: nueve módulos del reactor en SUCCESS, BUILD SUCCESS y comando de compilación Angular. Ejecución del 5 de noviembre, captura del 6 de noviembre.](assets/S06-ejecucion-build.jpg)
+
+*Transcript original: nueve módulos del reactor en SUCCESS, BUILD SUCCESS y comando de compilación Angular. Ejecución del 5 de noviembre, captura del 6 de noviembre.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
+
+![Reporte original de catálogo detenido: CARRITO con total null, OPEN y HALF_OPEN. El archivo completo conserva también la recuperación CLOSED.](assets/S06-ejecucion-circuito.jpg)
+
+*Reporte original de catálogo detenido: CARRITO con total null, OPEN y HALF_OPEN. El archivo completo conserva también la recuperación CLOSED.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
+
+![Transcript original de PowerShell: comando S06, Eureka y Config Server, orden 43 por 31.00 y CRUD de cliente 201/200/200/204.](assets/S06-ejecucion-feign-crud.jpg)
+
+*Transcript original de PowerShell: comando S06, Eureka y Config Server, orden 43 por 31.00 y CRUD de cliente 201/200/200/204.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
 
 ## Error o hallazgo real
 

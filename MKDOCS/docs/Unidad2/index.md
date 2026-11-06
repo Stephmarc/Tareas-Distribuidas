@@ -2,7 +2,7 @@
 
 **Jannys Graciela Navarro Acrota · Casa o Nada**
 
-Sesiones 6 a 11 sobre la implementación individual de Pagatu. Las pruebas y capturas nuevas corresponden al **5 de noviembre de 2026**, hora de Lima. La entrega grupal CASAS se mantiene separada.
+Sesiones 6 a 11 sobre la implementación individual de Pagatu. Las pruebas documentadas corresponden al **5 de noviembre de 2026**, hora de Lima. Las capturas complementarias de código y resultados en VS Code se tomaron el **6 de noviembre de 2026**, con reloj y usuario visibles. La entrega grupal CASAS se mantiene separada.
 
 | Sesión | Informe y evidencias | PDF |
 |---|---|---|

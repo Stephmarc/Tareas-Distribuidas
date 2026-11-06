@@ -16,6 +16,8 @@
 
 Pruebas realizadas el 5 de noviembre de 2026, hora de Lima. Las fechas ISO de los reportes usan UTC y por eso pueden indicar 6 de noviembre. Los IDs, estados y códigos que siguen proceden de las respuestas originales, no de resultados inventados.
 
+Capturas complementarias de VS Code tomadas el 6 de noviembre de 2026, con reloj real y usuario Windows visibles. Muestran código y archivos originales de las pruebas del 5 de noviembre; visualizar un transcript no constituye una nueva ejecución.
+
 ## 1. Kafka y pago
 
 El broker personal y pago-ms están ejecutándose. Kafka UI muestra orden-eventos, pago-eventos y cliente-eventos, cada uno con una partición. Pago tiene su propia base y su propio grupo pagatu-pago.
@@ -248,6 +250,14 @@ Las imágenes se conservan completas, sin superponer resultados ni modificar fec
 ![Kafka UI: orden.confirmada de la orden 50 con key 50 y contrato completo. Corresponde a la ejecución anterior conservada en S09/assets/s09-primera-aprobada.json.](assets/S08-mensaje.jpg)
 
 *Kafka UI: orden.confirmada de la orden 50 con key 50 y contrato completo. Corresponde a la ejecución anterior conservada en S09/assets/s09-primera-aprobada.json.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
+
+![Código real: topic cliente-eventos, grupo pagatu-cliente-avisos, eventos orden.confirmada/orden.cancelada y registro idempotente de avisos.](assets/S08-vscode-consumidor.jpg)
+
+*Código real: topic cliente-eventos, grupo pagatu-cliente-avisos, eventos orden.confirmada/orden.cancelada y registro idempotente de avisos.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
+
+![Transcript original: pago detenido, orden 53 pendiente y lag 1, luego PAGADA. Cliente detenido, orden 54 y lag 1, con un aviso después de recuperarse.](assets/S08-ejecucion-kafka.jpg)
+
+*Transcript original: pago detenido, orden 53 pendiente y lag 1, luego PAGADA. Cliente detenido, orden 54 y lag 1, con un aviso después de recuperarse.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
 
 ## Error o hallazgo real
 

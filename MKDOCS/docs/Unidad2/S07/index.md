@@ -16,6 +16,8 @@
 
 Pruebas realizadas el 5 de noviembre de 2026, hora de Lima. Las fechas ISO de los reportes usan UTC y por eso pueden indicar 6 de noviembre. Los IDs, estados y códigos que siguen proceden de las respuestas originales, no de resultados inventados.
 
+Capturas complementarias de VS Code tomadas el 6 de noviembre de 2026, con reloj real y usuario Windows visibles. Muestran código y archivos originales de las pruebas del 5 de noviembre; visualizar un transcript no constituye una nueva ejecución.
+
 ## 1. Auth propio construido
 
 Se arrancó el perfil s07 y PostgreSQL auth. El registro real respondió 201, el login con contraseña incorrecta 401 y el correcto 200. La firma RS256 se verificó con el JWKS público. Se consultaron usuarios, roles y usuario_roles y se comprobó el hash BCrypt del usuario de prueba. El JWT íntegro se conserva solo en memoria y no se publica.
@@ -426,6 +428,18 @@ Las imágenes se conservan completas, sin superponer resultados ni modificar fec
 ![S07 auth codigo](assets/S07-auth-codigo.jpg)
 
 *S07 auth codigo. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
+
+![Código real del Gateway: clientes exige ADMIN; las demás rutas API permiten ADMIN/CLIENTE y validan el JWT como Resource Server.](assets/S07-vscode-roles.jpg)
+
+*Código real del Gateway: clientes exige ADMIN; las demás rutas API permiten ADMIN/CLIENTE y validan el JWT como Resource Server.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
+
+![Transcript original: registro 201, login incorrecto 401, login correcto 200, verificación RS256 y tablas con BCrypt del usuario de prueba. El token íntegro se omitió.](assets/S07-ejecucion-auth.jpg)
+
+*Transcript original: registro 201, login incorrecto 401, login correcto 200, verificación RS256 y tablas con BCrypt del usuario de prueba. El token íntegro se omitió.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
+
+![Transcript original: respuestas 401, 403 y 200, identidad tomada del sub firmado y rechazo de consulta de una orden ajena.](assets/S07-ejecucion-seguridad.jpg)
+
+*Transcript original: respuestas 401, 403 y 200, identidad tomada del sub firmado y rechazo de consulta de una orden ajena.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
 
 ## Error o hallazgo real
 

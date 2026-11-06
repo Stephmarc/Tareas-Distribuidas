@@ -16,6 +16,8 @@
 
 Pruebas realizadas el 5 de noviembre de 2026, hora de Lima. Las fechas ISO de los reportes usan UTC y por eso pueden indicar 6 de noviembre. Los IDs, estados y códigos que siguen proceden de las respuestas originales, no de resultados inventados.
 
+Capturas complementarias de VS Code tomadas el 6 de noviembre de 2026, con reloj real y usuario Windows visibles. Muestran código y archivos originales de las pruebas del 5 de noviembre; visualizar un transcript no constituye una nueva ejecución.
+
 ## 1. Health groups reales
 
 Cliente configura livenessState en liveness y readinessState,db en readiness. Antes de la falla ambos devuelven 200 UP. Se detuvo el contenedor PostgreSQL de cliente, manteniendo vivo su proceso Java.
@@ -570,6 +572,14 @@ Las imágenes se conservan completas, sin superponer resultados ni modificar fec
 ![Grafana después de recuperar PostgreSQL: disponibilidad del proceso, series de códigos 500/503 durante la ventana de falla y logs centralizados. No se presenta como una captura tomada mientras la base seguía detenida.](assets/S10-grafana.jpg)
 
 *Grafana después de recuperar PostgreSQL: disponibilidad del proceso, series de códigos 500/503 durante la ventana de falla y logs centralizados. No se presenta como una captura tomada mientras la base seguía detenida.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
+
+![Configuración real: livenessState en liveness y readinessState,db en readiness, con los endpoints y logs de cliente.](assets/S10-vscode-health.jpg)
+
+*Configuración real: livenessState en liveness y readinessState,db en readiness, con los endpoints y logs de cliente.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
+
+![Transcript original: liveness 200, readiness 503 y negocio 500 con PostgreSQL detenido; recuperación 200 y correlación en cuatro servicios de Loki.](assets/S10-ejecucion-readiness.jpg)
+
+*Transcript original: liveness 200, readiness 503 y negocio 500 con PostgreSQL detenido; recuperación 200 y correlación en cuatro servicios de Loki.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
 
 ## Error o hallazgo real
 

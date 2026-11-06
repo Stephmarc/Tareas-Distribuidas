@@ -60,8 +60,24 @@
     "sha256": "3d3a40c26a80d83d1d40cdcc69576ab246e03634bc0792ed4703a0385c509e1b"
   },
   {
+    "archivo": "S06/assets/S06-ejecucion-build.jpg",
+    "sha256": "5784ee786121cea80dfdebe0a6f4a3eefa8a11517bc8a13d8168cb04a697d841"
+  },
+  {
+    "archivo": "S06/assets/S06-ejecucion-circuito.jpg",
+    "sha256": "741fabfae4a01289d4dd73577da5ad293155609d0699fd47cb076e6dc0306878"
+  },
+  {
+    "archivo": "S06/assets/S06-ejecucion-feign-crud.jpg",
+    "sha256": "58c17da04d6406e4968ec646a55fc64f36caa9016d3f376c879a33e2d190108e"
+  },
+  {
     "archivo": "S06/assets/s06-powershell.txt",
     "sha256": "476588904cf2a56608d11db85abdc850c1037b4dcd0da1af1d28218f5fe15d4f"
+  },
+  {
+    "archivo": "S06/assets/S06-vscode-feign.jpg",
+    "sha256": "b7aac88000be247f9fe7b00d77b61821d7c5fb548541df8277024677b2fb5aba"
   },
   {
     "archivo": "S06/assets/s06.json",
@@ -69,7 +85,7 @@
   },
   {
     "archivo": "S06/S06_Equipo09_NavarroJannys.pdf",
-    "sha256": "dfe4b5672af5153958c759c12c028199a549cb738046e769a0fc187d56e0c4c0"
+    "sha256": "6bc4221e00f1ac16f9cec7912be6d63a2f0173b9d13058392443927c212533bc"
   },
   {
     "archivo": "S07/assets/auth-powershell.txt",
@@ -84,6 +100,14 @@
     "sha256": "4b8e8bd580032e2f07e9fd5d84ca84fee8d177ba0f0a2c6b66e41acfe4acb9bd"
   },
   {
+    "archivo": "S07/assets/S07-ejecucion-auth.jpg",
+    "sha256": "80fd39bc04324fc8c100ed478789a21cf5a190293ecc4bcc0420527c0609e4a4"
+  },
+  {
+    "archivo": "S07/assets/S07-ejecucion-seguridad.jpg",
+    "sha256": "61f8fd9e53aa8be82f927abd3855094cf3c8199e1bb5b3d8e5bc587ca29df007"
+  },
+  {
     "archivo": "S07/assets/s07-legacy-powershell.txt",
     "sha256": "c1e1bce813a31359aecb23f6f2249de4b8f253743f51358174d29bfcf411e005"
   },
@@ -96,16 +120,24 @@
     "sha256": "93c6eef7c4d192fc070ef82b674fc414536c6e9ddffce2051e8c276fb7dd483c"
   },
   {
+    "archivo": "S07/assets/S07-vscode-roles.jpg",
+    "sha256": "73510a2cc9d0a3775dfbdc6a01a63951987af501b911f99461356944378eb91e"
+  },
+  {
     "archivo": "S07/assets/s07.json",
     "sha256": "7195b920495e20737556e833ffa3b3fdc4cdec9d334ca95033471f9fb92620e2"
   },
   {
     "archivo": "S07/S07_Equipo09_NavarroJannys.pdf",
-    "sha256": "f66705263085e9db0959dc56256b5bbff9c889ee82989b837555c3a97c76fd31"
+    "sha256": "81f9ea2002ecf790d0c40848c3d74f7a320e2c9a5663aa21d46b9c751aa22be8"
   },
   {
     "archivo": "S08/assets/kafka-topics.jpg",
     "sha256": "964ea2640ad92ee523ac36ae054a272bdf0dc41a7f9965d3dbf7984e9bea4924"
+  },
+  {
+    "archivo": "S08/assets/S08-ejecucion-kafka.jpg",
+    "sha256": "1585db8624ac70feee379c48a433c1bd8ad336a14f1b6f2fecb7988c8a7e8b69"
   },
   {
     "archivo": "S08/assets/s08-intento-codificacion-powershell.txt",
@@ -128,12 +160,16 @@
     "sha256": "b53b04a539879d7099ecc519b918acc90cd59abf303a49ead5cfa04a1d6e47a1"
   },
   {
+    "archivo": "S08/assets/S08-vscode-consumidor.jpg",
+    "sha256": "1f7c3dc9ba3c0680de413670db05569a05e1fc3ad7ddb97223e097b1590b5d83"
+  },
+  {
     "archivo": "S08/assets/s08.json",
     "sha256": "694377e020426fc281333abaa9de1e7e3f0ccaaee6f134e29c327f5e5d84d0ba"
   },
   {
     "archivo": "S08/S08_Equipo09_NavarroJannys.pdf",
-    "sha256": "6b76bc5a41ca0d0229bc712a2c631168d1b69b9959ae1d6739d307a435294ce1"
+    "sha256": "34f3a8e1e1009d06e95a81275e3898eb8bc4f4fdca064901a3f10c1398bb913e"
   },
   {
     "archivo": "S09/assets/estados-orden.svg",
@@ -142,6 +178,10 @@
   {
     "archivo": "S09/assets/S09-compensacion-kafka.jpg",
     "sha256": "ae97a257af7530073716293f636740aa695a0c5b9085812339c22f3ab6c1136b"
+  },
+  {
+    "archivo": "S09/assets/S09-ejecucion-duplicados.jpg",
+    "sha256": "7702cdbc74ec7749730bb742863b77288f1ffe48c19e7234f90afe6fad33c3b3"
   },
   {
     "archivo": "S09/assets/s09-intento-emisor-propio-powershell.txt",
@@ -160,16 +200,24 @@
     "sha256": "14a2fec1fc2d8b0c0625fa1f1e56c66e273b7027ac77fa38533cacedc245a91b"
   },
   {
+    "archivo": "S09/assets/S09-vscode-idempotencia.jpg",
+    "sha256": "bc34dce52d3dda3497d13c5f1e52863b616caed208ea4f431fee9b5b30edc6df"
+  },
+  {
     "archivo": "S09/assets/s09.json",
     "sha256": "2e0017cd135b4d89bad73d0aa523b6f69ea0db7a88dd73b3914a9891897e11a5"
   },
   {
     "archivo": "S09/S09_Equipo09_NavarroJannys.pdf",
-    "sha256": "5603ad35225137ae2cec4c775908efec9338daa3a52ed14a02649df3bc2c2555"
+    "sha256": "32a75d7807c20e18d94e6900e467b3313bd9bcb7c59f48377254f7949cbae77b"
   },
   {
     "archivo": "S10/assets/grafana-metricas-logs.jpg",
     "sha256": "14507c01fc44ec703250b11701661c267f77be027014f3d2b67aa2929abb37c3"
+  },
+  {
+    "archivo": "S10/assets/S10-ejecucion-readiness.jpg",
+    "sha256": "00c2af94717caa29265bbed75dfc0a075167fbcd533e62a327636e6b55124d8b"
   },
   {
     "archivo": "S10/assets/S10-grafana.jpg",
@@ -180,16 +228,24 @@
     "sha256": "fcea064e31bf8a318ad855c9284725755eb743bc6518cb452d2e34581a5f620d"
   },
   {
+    "archivo": "S10/assets/S10-vscode-health.jpg",
+    "sha256": "5b6493dd73b63a009f0bbe874582ecc72af0a6f365e70b4727e0b1811fbeebff"
+  },
+  {
     "archivo": "S10/assets/s10.json",
     "sha256": "3053db2436a2a46694431e1ec605ed19e78ea81db7b5b84c457d05d24f9c5272"
   },
   {
     "archivo": "S10/S10_Equipo09_NavarroJannys.pdf",
-    "sha256": "a5b2546e76bfd3564ad31cf51f68bdf57440a36d83de68a57411224fcb6a43ed"
+    "sha256": "71be69bc7f86b4672b512f44f62670d74cee40fd240af414ee69a89d58e04be6"
   },
   {
     "archivo": "S11/assets/pedidos-pagada-cancelada.jpg",
     "sha256": "c6c50ab0a4d28b21d8f60b709fcec7c83b7982db8cd4b820a35545d27e72146f"
+  },
+  {
+    "archivo": "S11/assets/S11-ejecucion-resultados.jpg",
+    "sha256": "194c3d3babffd25b666241c6f2820ef020395b720953188cc8ab15d6b5bedb1b"
   },
   {
     "archivo": "S11/assets/S11-pendiente.jpg",
@@ -208,12 +264,16 @@
     "sha256": "912fbbde9e0cd32735e628d20067beed82fd71455bd6303fe0fe14f967c219eb"
   },
   {
+    "archivo": "S11/assets/S11-vscode-pkce.jpg",
+    "sha256": "9d8855e33aed66ae8c1fb187f58659ec95560b6775f5eff8be1cc7e591601248"
+  },
+  {
     "archivo": "S11/assets/s11.json",
     "sha256": "4ceb881932f0531532e49c27f3c904361722de2926dca1a065f0952a8bdfd0c4"
   },
   {
     "archivo": "S11/S11_Equipo09_NavarroJannys.pdf",
-    "sha256": "dc7da481dfc7c60b2197449bcb4d9c2acd901f2e9dd2f129da64b3ea17dfeab2"
+    "sha256": "95cf04a865874915b465a696e0a5625b08bceba184cd592342fb837ce5769413"
   },
   {
     "codigo": "Services/pagatu-auth-ms/src/main/java/pe/edu/upeu/auth/Application.java",

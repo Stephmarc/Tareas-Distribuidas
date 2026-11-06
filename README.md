@@ -32,3 +32,7 @@ Los seis informes PDF se descargan desde MKDOCS/docs/Unidad2/S06 a S11. Cada ses
 Ejecuta las pruebas secuencialmente. Run-Legacy.ps1 prueba el issuer propio de S07 y restaura Keycloak; no lo solapes con Verify-Personal.cjs. El modo Angular ?evidencia=1 muestra hora y cuenta reales y comprueba PKCE sin registrar secretos.
 
 La revisión de Unidad 1 incorpora una prueba real de dos instancias en scripts/Verify-Unit1.ps1. La defensa oral y la evaluación del docente siguen siendo presenciales.
+
+## Capturas completadas el 6/11/2026
+
+Se incorporaron quince capturas complementarias de código y resultados originales en VS Code, distribuidas entre S06 y S11. Las imágenes conservan reloj y usuario visibles; las fechas internas de las ejecuciones del 5 de noviembre no se modificaron. Los seis PDF fueron actualizados.

@@ -22,7 +22,7 @@ Las capturas nativas válidas se guardan completas. El reloj de VS Code proviene
 
 Los transcripts son archivos originales generados por PowerShell; una vista de estos archivos en VS Code se identifica como tal, sin afirmar que sea una foto de CMD. Kafka UI y Grafana son capturas complementarias de los servicios funcionando.
 
-Windows se bloqueó durante esta ejecución. Las capturas negras y la pantalla de bloqueo se descartaron: no sirven como evidencia del código. Se conservan las capturas válidas y los extractos originales; quedan por completar las capturas nativas adicionales de código y ejecución por sesión cuando Windows esté desbloqueado.
+El 6 de noviembre se completaron las capturas nativas de código y resultados de S06 a S11, después de desbloquear Windows. Cada captura muestra la ventana completa de VS Code, el reloj real del equipo y el usuario Windows. Las vistas de ejecución identifican los transcripts originales de PowerShell y los reportes JSON; sus fechas de ejecución del 5 de noviembre se conservan.
 
 [Manifest de archivos y SHA256](manifest-evidencias-20261105.json)
 
@@ -33,6 +33,17 @@ Se documentan pruebas locales reproducibles. No se inventa una nota, participaci
 ## Preparación y reproducción
 
 [Pasos completos de ejecución](reproduccion.md). La verificación técnica usa cuentas locales de prueba, cuyos secretos se guardan fuera de Git.
+
+## Capturas complementarias del 6 de noviembre
+
+| Sesión | Código en VS Code | Resultados originales en VS Code |
+|---|---|---|
+| S06 | 1 | 3 |
+| S07 | 1 | 2 |
+| S08 | 1 | 1 |
+| S09 | 1 | 1 |
+| S10 | 1 | 1 |
+| S11 | 1 | 1 |
 
 ## Integridad de archivos
 

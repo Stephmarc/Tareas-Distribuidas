@@ -1,0 +1,71 @@
+[
+  {
+    "sesion": "S06",
+    "capturasCodigo": [
+      "S06-vscode-feign.jpg"
+    ],
+    "capturasResultados": [
+      "S06-ejecucion-build.jpg",
+      "S06-ejecucion-circuito.jpg",
+      "S06-ejecucion-feign-crud.jpg"
+    ],
+    "fechaCaptura": "2026-11-06 America/Lima",
+    "fechaEjecucionesDocumentadas": "2026-11-05 America/Lima"
+  },
+  {
+    "sesion": "S07",
+    "capturasCodigo": [
+      "S07-vscode-roles.jpg"
+    ],
+    "capturasResultados": [
+      "S07-ejecucion-auth.jpg",
+      "S07-ejecucion-seguridad.jpg"
+    ],
+    "fechaCaptura": "2026-11-06 America/Lima",
+    "fechaEjecucionesDocumentadas": "2026-11-05 America/Lima"
+  },
+  {
+    "sesion": "S08",
+    "capturasCodigo": [
+      "S08-vscode-consumidor.jpg"
+    ],
+    "capturasResultados": [
+      "S08-ejecucion-kafka.jpg"
+    ],
+    "fechaCaptura": "2026-11-06 America/Lima",
+    "fechaEjecucionesDocumentadas": "2026-11-05 America/Lima"
+  },
+  {
+    "sesion": "S09",
+    "capturasCodigo": [
+      "S09-vscode-idempotencia.jpg"
+    ],
+    "capturasResultados": [
+      "S09-ejecucion-duplicados.jpg"
+    ],
+    "fechaCaptura": "2026-11-06 America/Lima",
+    "fechaEjecucionesDocumentadas": "2026-11-05 America/Lima"
+  },
+  {
+    "sesion": "S10",
+    "capturasCodigo": [
+      "S10-vscode-health.jpg"
+    ],
+    "capturasResultados": [
+      "S10-ejecucion-readiness.jpg"
+    ],
+    "fechaCaptura": "2026-11-06 America/Lima",
+    "fechaEjecucionesDocumentadas": "2026-11-05 America/Lima"
+  },
+  {
+    "sesion": "S11",
+    "capturasCodigo": [
+      "S11-vscode-pkce.jpg"
+    ],
+    "capturasResultados": [
+      "S11-ejecucion-resultados.jpg"
+    ],
+    "fechaCaptura": "2026-11-06 America/Lima",
+    "fechaEjecucionesDocumentadas": "2026-11-05 America/Lima"
+  }
+]

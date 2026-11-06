@@ -16,6 +16,8 @@
 
 Pruebas realizadas el 5 de noviembre de 2026, hora de Lima. Las fechas ISO de los reportes usan UTC y por eso pueden indicar 6 de noviembre. Los IDs, estados y códigos que siguen proceden de las respuestas originales, no de resultados inventados.
 
+Capturas complementarias de VS Code tomadas el 6 de noviembre de 2026, con reloj real y usuario Windows visibles. Muestran código y archivos originales de las pruebas del 5 de noviembre; visualizar un transcript no constituye una nueva ejecución.
+
 ## 1. Conflicto real y protección idempotente
 
 Se reprodujo de forma aislada una violación SQL de pagos_orden_id_key mediante INSERT SELECT de un pago de prueba. Después se reenviaron los mensajes originales con kafka-console-producer: quedó una sola fila por orden y los logs indicaron duplicado ignorado. Esta reproducción no se presenta como una ejecución histórica de una versión insegura.
@@ -286,6 +288,14 @@ Las imágenes se conservan completas, sin superponer resultados ni modificar fec
 ![Kafka UI: orden.cancelada de la orden 51 repetida en offsets 35 y 36; la ejecución correspondiente se conserva en s09-primera-aprobada.json. La validación final puede usar otros IDs.](assets/S09-compensacion-kafka.jpg)
 
 *Kafka UI: orden.cancelada de la orden 51 repetida en offsets 35 y 36; la ejecución correspondiente se conserva en s09-primera-aprobada.json. La validación final puede usar otros IDs.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
+
+![Código real: ON CONFLICT DO NOTHING, revisión de filas afectadas y publicación de pago.validado o pago.fallido.](assets/S09-vscode-idempotencia.jpg)
+
+*Código real: ON CONFLICT DO NOTHING, revisión de filas afectadas y publicación de pago.validado o pago.fallido.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
+
+![Transcript original: 55 PAGADA y 56 CANCELADA, eventos repetidos sin duplicar pagos/avisos y conflicto UNIQUE real reproducido de forma aislada.](assets/S09-ejecucion-duplicados.jpg)
+
+*Transcript original: 55 PAGADA y 56 CANCELADA, eventos repetidos sin duplicar pagos/avisos y conflicto UNIQUE real reproducido de forma aislada.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
 
 ## Error o hallazgo real
 

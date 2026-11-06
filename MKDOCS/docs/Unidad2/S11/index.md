@@ -16,6 +16,8 @@
 
 Pruebas realizadas el 5 de noviembre de 2026, hora de Lima. Las fechas ISO de los reportes usan UTC y por eso pueden indicar 6 de noviembre. Los IDs, estados y códigos que siguen proceden de las respuestas originales, no de resultados inventados.
 
+Capturas complementarias de VS Code tomadas el 6 de noviembre de 2026, con reloj real y usuario Windows visibles. Muestran código y archivos originales de las pruebas del 5 de noviembre; visualizar un transcript no constituye una nueva ejecución.
+
 ## 1. Migración a Keycloak
 
 El estado final usa el realm pagatu y roles ADMIN/CLIENTE de Keycloak. Auth propio se conserva para estudiar S07, pero la SPA y los Resource Servers finales confían en Keycloak. El frontend muestra el usuario real demo-unidad2.
@@ -169,6 +171,14 @@ Las imágenes se conservan completas, sin superponer resultados ni modificar fec
 ![Login real: state coincide, SHA-256 del verifier coincide con el challenge y el intercambio HTTP responde 200. No se muestran tokens ni verificadores.](assets/S11-pkce.jpg)
 
 *Login real: state coincide, SHA-256 del verifier coincide con el challenge y el intercambio HTTP responde 200. No se muestran tokens ni verificadores.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
+
+![Código real: compara state y SHA-256(code_verifier) con code_challenge; registra únicamente booleanos y estado HTTP.](assets/S11-vscode-pkce.jpg)
+
+*Código real: compara state y SHA-256(code_verifier) con code_challenge; registra únicamente booleanos y estado HTTP.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
+
+![Reporte original: SQL confirma 48 PAGADA y 49 CANCELADA; stateCoincide=true, verifierS256Coincide=true e intercambio HTTP 200.](assets/S11-ejecucion-resultados.jpg)
+
+*Reporte original: SQL confirma 48 PAGADA y 49 CANCELADA; stateCoincide=true, verifierS256Coincide=true e intercambio HTTP 200.. Captura íntegra de la vista real; consultar la salida original para los detalles completos.*
 
 ## Error o hallazgo real
 
