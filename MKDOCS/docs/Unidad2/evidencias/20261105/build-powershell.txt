@@ -1,0 +1,312 @@
+**********************
+PowerShell transcript start
+Start time: 20261105230158
+Username: STEPHANI\grace
+RunAs User: STEPHANI\grace
+Configuration Name: 
+Machine: STEPHANI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Users\grace\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+Copy-Item -LiteralPath 'C:\Users\grace\Documents\Codex\2026-10-29\oa\work\Verify-Build.ps1' -Destination scripts\Verify-Build.ps1
+& .\scripts\Verify-Build.ps1
+Process ID: 33784
+PSVersion: 7.6.9
+PSEdition: Core
+GitCommitId: 7.6.9
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu\platform\runtime\evidencias-20261105\build-powershell.txt
+Fecha real: 2026-11-05T23:01:58.2467712-05:00 | Windows: STEPHANI\grace
+COMANDO EJECUTADO: mvn --batch-mode --no-transfer-progress verify
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO]
+[INFO] pagatu-config                                                      [jar]
+[INFO] pagatu-eureka                                                      [jar]
+[INFO] pagatu-gateway                                                     [jar]
+[INFO] pagatu-catalogo-ms                                                 [jar]
+[INFO] pagatu-orden-ms                                                    [jar]
+[INFO] pagatu-cliente-ms                                                  [jar]
+[INFO] pagatu-pago-ms                                                     [jar]
+[INFO] pagatu-auth-ms                                                     [jar]
+[INFO] pagatu-unidad2                                                     [pom]
+[INFO]
+[INFO] ---------------------< pe.edu.upeu:pagatu-config >----------------------
+[INFO] Building pagatu-config 0.0.1-SNAPSHOT                              [1/9]
+[INFO]   from Infra\pagatu-config\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ pagatu-config ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.14.1:compile (default-compile) @ pagatu-config ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ pagatu-config ---
+[INFO] skip non existing resourceDirectory C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Infra\pagatu-config\src\test\resources
+[INFO]
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ pagatu-config ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ pagatu-config ---
+[INFO]
+[INFO] --- jar:3.4.2:jar (default-jar) @ pagatu-config ---
+[INFO]
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ pagatu-config ---
+[INFO] Replacing main artifact C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Infra\pagatu-config\target\pagatu-config-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Infra\pagatu-config\target\pagatu-config-0.0.1-SNAPSHOT.jar.original
+[INFO]
+[INFO] ---------------------< pe.edu.upeu:pagatu-eureka >----------------------
+[INFO] Building pagatu-eureka 0.0.1-SNAPSHOT                              [2/9]
+[INFO]   from Infra\pagatu-eureka\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ pagatu-eureka ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.14.1:compile (default-compile) @ pagatu-eureka ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ pagatu-eureka ---
+[INFO] skip non existing resourceDirectory C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Infra\pagatu-eureka\src\test\resources
+[INFO]
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ pagatu-eureka ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ pagatu-eureka ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- jar:3.4.2:jar (default-jar) @ pagatu-eureka ---
+[INFO]
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ pagatu-eureka ---
+[INFO] Replacing main artifact C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Infra\pagatu-eureka\target\pagatu-eureka-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Infra\pagatu-eureka\target\pagatu-eureka-0.0.1-SNAPSHOT.jar.original
+[INFO]
+[INFO] ---------------------< pe.edu.upeu:pagatu-gateway >---------------------
+[INFO] Building pagatu-gateway 0.0.1-SNAPSHOT                             [3/9]
+[INFO]   from Infra\pagatu-gateway\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ pagatu-gateway ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.14.1:compile (default-compile) @ pagatu-gateway ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ pagatu-gateway ---
+[INFO] skip non existing resourceDirectory C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Infra\pagatu-gateway\src\test\resources
+[INFO]
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ pagatu-gateway ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ pagatu-gateway ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- jar:3.4.2:jar (default-jar) @ pagatu-gateway ---
+[INFO]
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ pagatu-gateway ---
+[INFO] Replacing main artifact C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Infra\pagatu-gateway\target\pagatu-gateway-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Infra\pagatu-gateway\target\pagatu-gateway-0.0.1-SNAPSHOT.jar.original
+[INFO]
+[INFO] -------------------< pe.edu.upeu:pagatu-catalogo-ms >-------------------
+[INFO] Building pagatu-catalogo-ms 0.0.1-SNAPSHOT                         [4/9]
+[INFO]   from Services\pagatu-catalogo-ms\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ pagatu-catalogo-ms ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.14.1:compile (default-compile) @ pagatu-catalogo-ms ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ pagatu-catalogo-ms ---
+[INFO] skip non existing resourceDirectory C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Services\pagatu-catalogo-ms\src\test\resources
+[INFO]
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ pagatu-catalogo-ms ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ pagatu-catalogo-ms ---
+[INFO]
+[INFO] --- jar:3.4.2:jar (default-jar) @ pagatu-catalogo-ms ---
+[INFO]
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ pagatu-catalogo-ms ---
+[INFO] Replacing main artifact C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Services\pagatu-catalogo-ms\target\pagatu-catalogo-ms-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Services\pagatu-catalogo-ms\target\pagatu-catalogo-ms-0.0.1-SNAPSHOT.jar.original
+[INFO]
+[INFO] --------------------< pe.edu.upeu:pagatu-orden-ms >---------------------
+[INFO] Building pagatu-orden-ms 0.0.1-SNAPSHOT                            [5/9]
+[INFO]   from Services\pagatu-orden-ms\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ pagatu-orden-ms ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.14.1:compile (default-compile) @ pagatu-orden-ms ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ pagatu-orden-ms ---
+[INFO] skip non existing resourceDirectory C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Services\pagatu-orden-ms\src\test\resources
+[INFO]
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ pagatu-orden-ms ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ pagatu-orden-ms ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running pe.edu.upeu.orden.PagatuOrdenMsApplicationTests
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\grace\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.8\byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.916 s -- in pe.edu.upeu.orden.PagatuOrdenMsApplicationTests
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- jar:3.4.2:jar (default-jar) @ pagatu-orden-ms ---
+[INFO]
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ pagatu-orden-ms ---
+[INFO] Replacing main artifact C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Services\pagatu-orden-ms\target\pagatu-orden-ms-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Services\pagatu-orden-ms\target\pagatu-orden-ms-0.0.1-SNAPSHOT.jar.original
+[INFO]
+[INFO] -------------------< pe.edu.upeu:pagatu-cliente-ms >--------------------
+[INFO] Building pagatu-cliente-ms 0.0.1-SNAPSHOT                          [6/9]
+[INFO]   from Services\pagatu-cliente-ms\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ pagatu-cliente-ms ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.14.1:compile (default-compile) @ pagatu-cliente-ms ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ pagatu-cliente-ms ---
+[INFO] skip non existing resourceDirectory C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Services\pagatu-cliente-ms\src\test\resources
+[INFO]
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ pagatu-cliente-ms ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ pagatu-cliente-ms ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- jar:3.4.2:jar (default-jar) @ pagatu-cliente-ms ---
+[INFO]
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ pagatu-cliente-ms ---
+[INFO] Replacing main artifact C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Services\pagatu-cliente-ms\target\pagatu-cliente-ms-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Services\pagatu-cliente-ms\target\pagatu-cliente-ms-0.0.1-SNAPSHOT.jar.original
+[INFO]
+[INFO] ---------------------< pe.edu.upeu:pagatu-pago-ms >---------------------
+[INFO] Building pagatu-pago-ms 0.0.1-SNAPSHOT                             [7/9]
+[INFO]   from Services\pagatu-pago-ms\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ pagatu-pago-ms ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.14.1:compile (default-compile) @ pagatu-pago-ms ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ pagatu-pago-ms ---
+[INFO] skip non existing resourceDirectory C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Services\pagatu-pago-ms\src\test\resources
+[INFO]
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ pagatu-pago-ms ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ pagatu-pago-ms ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- jar:3.4.2:jar (default-jar) @ pagatu-pago-ms ---
+[INFO]
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ pagatu-pago-ms ---
+[INFO] Replacing main artifact C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Services\pagatu-pago-ms\target\pagatu-pago-ms-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Services\pagatu-pago-ms\target\pagatu-pago-ms-0.0.1-SNAPSHOT.jar.original
+[INFO]
+[INFO] ---------------------< pe.edu.upeu:pagatu-auth-ms >---------------------
+[INFO] Building pagatu-auth-ms 0.0.1-SNAPSHOT                             [8/9]
+[INFO]   from Services\pagatu-auth-ms\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ pagatu-auth-ms ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.14.1:compile (default-compile) @ pagatu-auth-ms ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ pagatu-auth-ms ---
+[INFO] skip non existing resourceDirectory C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Services\pagatu-auth-ms\src\test\resources
+[INFO]
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ pagatu-auth-ms ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ pagatu-auth-ms ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- jar:3.4.2:jar (default-jar) @ pagatu-auth-ms ---
+[INFO]
+[INFO] --- spring-boot:4.0.7:repackage (repackage) @ pagatu-auth-ms ---
+[INFO] Replacing main artifact C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Services\pagatu-auth-ms\target\pagatu-auth-ms-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\grace\MicroServicios\Sesi�n 1\Pagatu\Services\pagatu-auth-ms\target\pagatu-auth-ms-0.0.1-SNAPSHOT.jar.original
+[INFO]
+[INFO] ---------------------< pe.edu.upeu:pagatu-unidad2 >---------------------
+[INFO] Building pagatu-unidad2 1.0.0                                      [9/9]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO]
+[INFO] pagatu-config 0.0.1-SNAPSHOT ....................... SUCCESS [ 11.944 s]
+[INFO] pagatu-eureka 0.0.1-SNAPSHOT ....................... SUCCESS [  4.554 s]
+[INFO] pagatu-gateway 0.0.1-SNAPSHOT ...................... SUCCESS [  2.748 s]
+[INFO] pagatu-catalogo-ms 0.0.1-SNAPSHOT .................. SUCCESS [  2.384 s]
+[INFO] pagatu-orden-ms 0.0.1-SNAPSHOT ..................... SUCCESS [ 15.870 s]
+[INFO] pagatu-cliente-ms 0.0.1-SNAPSHOT ................... SUCCESS [  0.760 s]
+[INFO] pagatu-pago-ms 0.0.1-SNAPSHOT ...................... SUCCESS [  0.637 s]
+[INFO] pagatu-auth-ms 0.0.1-SNAPSHOT ...................... SUCCESS [  0.674 s]
+[INFO] pagatu-unidad2 1.0.0 ............................... SUCCESS [  0.001 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  45.057 s
+[INFO] Finished at: 2026-11-05T23:02:50-05:00
+[INFO] ------------------------------------------------------------------------
+COMANDO EJECUTADO: node node_modules/@angular/cli/bin/ng.js build
+> Building...
+√ Building...
+Initial chunk files | Names         |  Raw size | Estimated transfer size
+main.js             | main          | 144.93 kB |                42.76 kB
+styles.css          | styles        |   1.42 kB |               539 bytes
+chunk-2NFLSA4Y.js   | -             | 449 bytes |               449 bytes
+
+                    | Initial total | 146.80 kB |                43.75 kB
+
+Lazy chunk files    | Names         |  Raw size | Estimated transfer size
+chunk-QAPTTXM6.js   | keycloak-dpop |   5.68 kB |                 2.01 kB
+
+Application bundle generation complete. [7.105 seconds] - 2026-11-06T04:03:13.634Z
+
+Output location: C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu\clients\pagatu-frontend\dist\pagatu-frontend
+
+**********************
+PowerShell transcript end
+End time: 20261105230313
+**********************

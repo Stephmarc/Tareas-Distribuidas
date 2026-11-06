@@ -1,0 +1,15 @@
+{
+  "fechaReportes": "Compilaci\u00f3n real 5/11/2026",
+  "suites": [
+    {
+      "suite": "pe.edu.upeu.orden.PagatuOrdenMsApplicationTests",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "tests": 3,
+  "fallos": 0,
+  "errores": 0
+}

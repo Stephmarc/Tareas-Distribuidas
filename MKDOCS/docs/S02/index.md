@@ -204,3 +204,8 @@ docker compose -f compose-dev.yml up -d
 ```powershell
 curl.exe -i http://localhost:8080/api/v1/ordenes
 ```
+
+
+## Actualización de verificación · 5/11/2026
+
+Se conserva arriba el informe histórico. El registro actual en Eureka, la configuración externa y las dos instancias de catálogo ya se verificaron en ejecución: [revisión de Unidad 1](../Unidad1/auditoria.md) y [prueba S06](../Unidad2/S06/index.md).

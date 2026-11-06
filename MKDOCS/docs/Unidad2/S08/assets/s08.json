@@ -1,0 +1,108 @@
+{
+  "sesion": "s08",
+  "fecha": "2026-11-06T03:56:57.955Z",
+  "usuarioWindows": "grace",
+  "estudiante": "Jannys Graciela Navarro Acrota",
+  "pasos": [
+    {
+      "prueba": "POST orden autenticada",
+      "status": 201,
+      "request": {
+        "metodoPago": "YAPE_PLIN",
+        "detalles": [
+          {
+            "idProducto": 1,
+            "cantidad": 2
+          }
+        ]
+      },
+      "response": {
+        "id": 53,
+        "nombre": "Orden de 891b60fa-0606-48a7-bd4c-7ef9ed5eabdf",
+        "descripcion": null,
+        "clienteId": "891b60fa-0606-48a7-bd4c-7ef9ed5eabdf",
+        "estado": "PENDIENTE_PAGO",
+        "total": 31,
+        "detalles": [
+          {
+            "id": 53,
+            "nombreProducto": "Producto de prueba",
+            "productoId": 1,
+            "cantidad": 2,
+            "precioUnitario": 15.5,
+            "ordenId": 53
+          }
+        ]
+      },
+      "trace": "personal-s08-2dd947a0-1c6e-44b5-9330-8a501e094d37"
+    },
+    {
+      "prueba": "Orden persiste con consumidor pago apagado",
+      "orden": 53,
+      "estado": "PENDIENTE_PAGO"
+    },
+    {
+      "prueba": "Lag real del consumidor detenido",
+      "salida": "GROUP           TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                                 HOST            CLIENT-ID\npagatu-pago     orden-eventos   0          40              41              1               consumer-pagatu-pago-1-4a7a723a-bc37-4a72-843c-14b69e1fb62f /172.21.0.1     consumer-pagatu-pago-1"
+    },
+    {
+      "prueba": "Estado final de orden 53",
+      "estado": "PAGADA",
+      "total": 31
+    },
+    {
+      "prueba": "POST orden autenticada",
+      "status": 201,
+      "request": {
+        "metodoPago": "YAPE_PLIN",
+        "detalles": [
+          {
+            "idProducto": 1,
+            "cantidad": 2
+          }
+        ]
+      },
+      "response": {
+        "id": 54,
+        "nombre": "Orden de 891b60fa-0606-48a7-bd4c-7ef9ed5eabdf",
+        "descripcion": null,
+        "clienteId": "891b60fa-0606-48a7-bd4c-7ef9ed5eabdf",
+        "estado": "PENDIENTE_PAGO",
+        "total": 31,
+        "detalles": [
+          {
+            "id": 54,
+            "nombreProducto": "Producto de prueba",
+            "productoId": 1,
+            "cantidad": 2,
+            "precioUnitario": 15.5,
+            "ordenId": 54
+          }
+        ]
+      },
+      "trace": "personal-s08-30a55dfd-dc9a-4b42-b662-4375c6f0f281"
+    },
+    {
+      "prueba": "Estado final de orden 54",
+      "estado": "PAGADA",
+      "total": 31
+    },
+    {
+      "prueba": "Evento propio orden.confirmada espera a cliente-ms",
+      "orden": 54,
+      "salida": "GROUP                 TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                                           HOST            CLIENT-ID\npagatu-cliente-avisos cliente-eventos 0          39              40              1               consumer-pagatu-cliente-avisos-1-0d6ee5bb-0f67-4a5f-ba6c-3240bddc5a22 /172.21.0.1     consumer-pagatu-cliente-avisos-1"
+    },
+    {
+      "prueba": "Cliente consume evento propio despues de recuperarse",
+      "orden": 54,
+      "avisos": 1
+    }
+  ],
+  "lagPago": "GROUP           TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                                 HOST            CLIENT-ID\npagatu-pago     orden-eventos   0          40              41              1               consumer-pagatu-pago-1-4a7a723a-bc37-4a72-843c-14b69e1fb62f /172.21.0.1     consumer-pagatu-pago-1",
+  "lagCliente": "GROUP                 TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                                           HOST            CLIENT-ID\npagatu-cliente-avisos cliente-eventos 0          39              40              1               consumer-pagatu-cliente-avisos-1-0d6ee5bb-0f67-4a5f-ba6c-3240bddc5a22 /172.21.0.1     consumer-pagatu-cliente-avisos-1",
+  "ordenes": {
+    "pago": 53,
+    "eventoPropio": 54
+  },
+  "resultado": "APROBADO"
+}

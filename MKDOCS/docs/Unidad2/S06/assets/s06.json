@@ -1,0 +1,106 @@
+{
+  "sesion": "s06",
+  "fecha": "2026-11-06T03:26:31.488Z",
+  "usuarioWindows": "grace",
+  "estudiante": "Jannys Graciela Navarro Acrota",
+  "pasos": [
+    {
+      "prueba": "Orden y cliente registrados en Eureka",
+      "aplicaciones": [
+        "PAGATU-PAGO-MS",
+        "PAGATU-GATEWAY",
+        "PAGATU-CATALOGO-MS",
+        "PAGATU-ORDEN-MS",
+        "PAGATU-CLIENTE-MS"
+      ]
+    },
+    {
+      "prueba": "Configuracion externa pagatu-orden-ms",
+      "status": 200,
+      "fuentes": [
+        "file:config-repo/pagatu-orden-ms-dev.yml"
+      ]
+    },
+    {
+      "prueba": "Configuracion externa pagatu-cliente-ms",
+      "status": 200,
+      "fuentes": [
+        "file:config-repo/pagatu-cliente-ms-dev.yml"
+      ]
+    },
+    {
+      "prueba": "POST orden autenticada",
+      "status": 201,
+      "request": {
+        "metodoPago": "YAPE_PLIN",
+        "detalles": [
+          {
+            "idProducto": 1,
+            "cantidad": 2
+          }
+        ]
+      },
+      "response": {
+        "id": 43,
+        "nombre": "Orden de 891b60fa-0606-48a7-bd4c-7ef9ed5eabdf",
+        "descripcion": null,
+        "clienteId": "891b60fa-0606-48a7-bd4c-7ef9ed5eabdf",
+        "estado": "PENDIENTE_PAGO",
+        "total": 31,
+        "detalles": [
+          {
+            "id": 43,
+            "nombreProducto": "Producto de prueba",
+            "productoId": 1,
+            "cantidad": 2,
+            "precioUnitario": 15.5,
+            "ordenId": 43
+          }
+        ]
+      },
+      "trace": "personal-s06-9f0b1360-831a-4c3a-b52c-fe255c862b77"
+    },
+    {
+      "prueba": "Feign obtiene precio real: 2 x 15.50",
+      "total": 31
+    },
+    {
+      "prueba": "Cliente-ms CRUD crear",
+      "status": 201,
+      "response": {
+        "id": 3,
+        "nombre": "Cliente practica personal 1793935592521",
+        "documento": "DOC-DEMO"
+      }
+    },
+    {
+      "prueba": "Cliente-ms CRUD actualizar",
+      "status": 200,
+      "response": {
+        "id": 3,
+        "nombre": "Cliente evidencia actualizado",
+        "documento": "DOC-DEMO"
+      }
+    },
+    {
+      "prueba": "Cliente-ms CRUD consultar",
+      "status": 200,
+      "response": {
+        "id": 3,
+        "nombre": "Cliente evidencia actualizado",
+        "documento": "DOC-DEMO"
+      }
+    },
+    {
+      "prueba": "Cliente-ms CRUD eliminar registro exclusivo",
+      "status": 204,
+      "id": 3
+    },
+    {
+      "prueba": "Estado final de orden 43",
+      "estado": "PAGADA",
+      "total": 31
+    }
+  ],
+  "resultado": "APROBADO"
+}

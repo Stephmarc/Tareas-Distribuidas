@@ -65,3 +65,8 @@ Eureka permite que los servicios se localicen mediante un nombre lógico en luga
 ## Reflexión
 
 En esta sesión comprendí que el registro y descubrimiento de servicios depende no solo de la configuración de Eureka, sino también de que los componentes requeridos estén activos al mismo tiempo. Los conflictos de puertos pueden impedir el arranque incluso cuando la configuración es correcta. También comprobé que Config Server permite mantener centralizada la configuración del microservicio. Como mejora, antes de iniciar una práctica distribuida verificaría los puertos ocupados, el estado de Config Server, la base de datos y Eureka. Esto permite detectar problemas más rápido y facilita la ejecución concurrente de varias instancias.
+
+
+## Actualización de verificación · 5/11/2026
+
+Se conserva arriba el informe histórico. El registro actual en Eureka, la configuración externa y las dos instancias de catálogo ya se verificaron en ejecución: [revisión de Unidad 1](../Unidad1/auditoria.md) y [prueba S06](../Unidad2/S06/index.md).

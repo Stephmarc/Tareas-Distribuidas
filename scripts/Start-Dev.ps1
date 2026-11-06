@@ -38,13 +38,14 @@ try {
         $pidFile = Join-Path $runtimeDir "$Name.pid"
         if (Test-Path -LiteralPath $pidFile) {
             $serviceProcessId = [int](Get-Content -LiteralPath $pidFile)
-            if (Get-Process -Id $serviceProcessId -ErrorAction SilentlyContinue) { Wait-Http $Health; return }
+            $recordedProcess = Get-CimInstance Win32_Process -Filter "ProcessId=$serviceProcessId" -ErrorAction SilentlyContinue
+            if ($recordedProcess -and $recordedProcess.Name -eq 'java.exe' -and $recordedProcess.CommandLine -like ('*'+$modulePath+'*')) { Wait-Http $Health; return }
         }
         if (Test-NetConnection -ComputerName localhost -Port ([uri]$Health).Port -InformationLevel Quiet -WarningAction SilentlyContinue) { throw "Puerto ocupado en $Health. No se detendrá un proceso ajeno." }
         $jarPath = (Get-ChildItem -LiteralPath (Join-Path $modulePath 'target') -Filter '*.jar' | Select-Object -First 1).FullName
         if (-not $jarPath) { throw "No existe el JAR de $Name" }
         New-Item -ItemType Directory -Force (Join-Path $modulePath 'logs') | Out-Null
-        $serviceProcess = Start-Process -FilePath (Get-Command java).Source -ArgumentList @('-jar',('"'+$jarPath+'"')) -WorkingDirectory $modulePath -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $runtimeDir "$Name.stdout.log") -RedirectStandardError (Join-Path $runtimeDir "$Name.stderr.log")
+        $serviceProcess = Start-Process -FilePath (Get-Command java).Source -ArgumentList @('-Xms64m','-Xmx384m','-jar',('"'+$jarPath+'"')) -WorkingDirectory $modulePath -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $runtimeDir "$Name.stdout.log") -RedirectStandardError (Join-Path $runtimeDir "$Name.stderr.log")
         $serviceProcess.Id | Set-Content -LiteralPath $pidFile
         Wait-Http $Health
     }

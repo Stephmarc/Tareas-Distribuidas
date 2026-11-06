@@ -1,0 +1,13 @@
+{
+  "name": "personal-evidence-clock",
+  "displayName": "Reloj real para evidencia personal",
+  "publisher": "local-evidence",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.cjs"
+}

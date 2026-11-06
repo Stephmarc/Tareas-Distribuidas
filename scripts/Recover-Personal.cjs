@@ -1,0 +1,1 @@
+const {control}=require('./PersonalRuntime.cjs');(async()=>{for(const name of ['catalogo','orden','cliente','gateway'])await control(name,'Restart',false);console.log('Todos los servicios personales usan Keycloak y procesos independientes.');})().catch(e=>{console.error(e.message);process.exitCode=1});

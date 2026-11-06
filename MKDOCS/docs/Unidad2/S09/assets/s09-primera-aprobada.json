@@ -1,0 +1,130 @@
+{
+  "sesion": "s09",
+  "fecha": "2026-11-06T03:30:54.872Z",
+  "usuarioWindows": "grace",
+  "estudiante": "Jannys Graciela Navarro Acrota",
+  "pasos": [
+    {
+      "prueba": "POST orden autenticada",
+      "status": 201,
+      "request": {
+        "metodoPago": "YAPE_PLIN",
+        "detalles": [
+          {
+            "idProducto": 1,
+            "cantidad": 2
+          }
+        ]
+      },
+      "response": {
+        "id": 50,
+        "nombre": "Orden de 891b60fa-0606-48a7-bd4c-7ef9ed5eabdf",
+        "descripcion": null,
+        "clienteId": "891b60fa-0606-48a7-bd4c-7ef9ed5eabdf",
+        "estado": "PENDIENTE_PAGO",
+        "total": 31,
+        "detalles": [
+          {
+            "id": 50,
+            "nombreProducto": "Producto de prueba",
+            "productoId": 1,
+            "cantidad": 2,
+            "precioUnitario": 15.5,
+            "ordenId": 50
+          }
+        ]
+      },
+      "trace": "personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53"
+    },
+    {
+      "prueba": "Estado final de orden 50",
+      "estado": "PAGADA",
+      "total": 31
+    },
+    {
+      "prueba": "POST orden autenticada",
+      "status": 201,
+      "request": {
+        "metodoPago": "RECHAZADO",
+        "detalles": [
+          {
+            "idProducto": 1,
+            "cantidad": 2
+          }
+        ]
+      },
+      "response": {
+        "id": 51,
+        "nombre": "Orden de 891b60fa-0606-48a7-bd4c-7ef9ed5eabdf",
+        "descripcion": null,
+        "clienteId": "891b60fa-0606-48a7-bd4c-7ef9ed5eabdf",
+        "estado": "PENDIENTE_PAGO",
+        "total": 31,
+        "detalles": [
+          {
+            "id": 51,
+            "nombreProducto": "Producto de prueba",
+            "productoId": 1,
+            "cantidad": 2,
+            "precioUnitario": 15.5,
+            "ordenId": 51
+          }
+        ]
+      },
+      "trace": "personal-s09-c86669b9-1380-47bb-9a96-1e1ac08a1585"
+    },
+    {
+      "prueba": "Estado final de orden 51",
+      "estado": "CANCELADA",
+      "total": 31
+    },
+    {
+      "prueba": "Duplicado de orden no duplica pago",
+      "orden": 50,
+      "filas": 1
+    },
+    {
+      "prueba": "Duplicado de orden no duplica pago",
+      "orden": 51,
+      "filas": 1
+    },
+    {
+      "prueba": "Estado final de orden 51",
+      "estado": "CANCELADA",
+      "total": 31
+    },
+    {
+      "prueba": "Compensacion duplicada no duplica aviso",
+      "orden": 51,
+      "filas": 1
+    },
+    {
+      "prueba": "Conflicto SQL real reproducido de forma aislada",
+      "error": "ERROR:  duplicate key value violates unique constraint \"pagos_orden_id_key\"\nDETAIL:  Key (orden_id)=(50) already exists.\n"
+    }
+  ],
+  "logs": {
+    "orden": [
+      "2026-11-05 22:30:56.037 [personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53] INFO  p.edu.upeu.orden.event.PagoListener - Saga orden=50 estado=PAGADA resultado=aplicado",
+      "2026-11-05 22:30:58.115 [personal-s09-c86669b9-1380-47bb-9a96-1e1ac08a1585] INFO  p.edu.upeu.orden.event.PagoListener - Saga orden=51 estado=CANCELADA resultado=aplicado",
+      "2026-11-05 22:31:19.741 [personal-s09-c86669b9-1380-47bb-9a96-1e1ac08a1585] INFO  p.edu.upeu.orden.event.PagoListener - Saga orden=51 estado=CANCELADA resultado=duplicado ignorado"
+    ],
+    "pago": [
+      "2026-11-05T22:30:55.791-05:00  INFO [traceId=personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53] 35412 --- [pagatu-pago-ms] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] pe.edu.upeu.pago.event.OrdenListener     : Pago orden=50 estado=VALIDADO",
+      "2026-11-05T22:30:57.903-05:00  INFO [traceId=personal-s09-c86669b9-1380-47bb-9a96-1e1ac08a1585] 35412 --- [pagatu-pago-ms] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] pe.edu.upeu.pago.event.OrdenListener     : Pago orden=51 estado=RECHAZADO",
+      "2026-11-05T22:31:03.985-05:00  INFO [traceId=personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53] 35412 --- [pagatu-pago-ms] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] pe.edu.upeu.pago.event.OrdenListener     : Pago duplicado ignorado orden=50",
+      "2026-11-05T22:31:09.648-05:00  INFO [traceId=personal-s09-c86669b9-1380-47bb-9a96-1e1ac08a1585] 35412 --- [pagatu-pago-ms] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] pe.edu.upeu.pago.event.OrdenListener     : Pago duplicado ignorado orden=51"
+    ],
+    "cliente": [
+      "2026-11-05T22:30:57.880-05:00  INFO [traceId=] 22964 --- [pagatu-cliente-ms] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] p.edu.upeu.cliente.event.AvisoListener   : Aviso registrado orden=50 evento=orden.confirmada resultado=aplicado traceId=personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53",
+      "2026-11-05T22:30:59.963-05:00  INFO [traceId=] 22964 --- [pagatu-cliente-ms] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] p.edu.upeu.cliente.event.AvisoListener   : Aviso registrado orden=51 evento=orden.cancelada resultado=aplicado traceId=personal-s09-c86669b9-1380-47bb-9a96-1e1ac08a1585",
+      "2026-11-05T22:31:28.501-05:00  INFO [traceId=] 22964 --- [pagatu-cliente-ms] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] p.edu.upeu.cliente.event.AvisoListener   : Aviso registrado orden=51 evento=orden.cancelada resultado=duplicado ignorado traceId=personal-s09-c86669b9-1380-47bb-9a96-1e1ac08a1585"
+    ]
+  },
+  "ordenes": {
+    "pagada": 50,
+    "cancelada": 51
+  },
+  "trace": "personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53",
+  "resultado": "APROBADO"
+}

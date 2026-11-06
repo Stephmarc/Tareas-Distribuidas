@@ -1,0 +1,40 @@
+**********************
+PowerShell transcript start
+Start time: 20261105223132
+Username: STEPHANI\grace
+RunAs User: STEPHANI\grace
+Configuration Name: 
+Machine: STEPHANI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Users\grace\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+& .\scripts\Run-PersonalEvidence.ps1 -Sesion s09
+& .\scripts\Run-PersonalEvidence.ps1 -Sesion s10
+Process ID: 6664
+PSVersion: 7.6.9
+PSEdition: Core
+GitCommitId: 7.6.9
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu\platform\runtime\evidencias-20261105\s10-powershell.txt
+Estudiante: Jannys Graciela Navarro Acrota | Tarea personal | s10
+Fecha real: 2026-11-05T22:31:32.7427428-05:00 | Windows: STEPHANI\grace
+Directorio de trabajo: C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu
+COMANDO EJECUTADO: node scripts/Verify-Personal.cjs s10
+TAREA PERSONAL · S10 · 5/11/2026, 22:31:32 · Windows: grace
+VERIFICADO: Cliente liveness antes de falla {"status":200,"response":{"status":"UP"}}
+VERIFICADO: Cliente readiness antes de falla {"status":200,"response":{"status":"UP"}}
+VERIFICADO: Proceso vivo con PostgreSQL detenido {"status":200,"response":{"status":"UP"}}
+VERIFICADO: Readiness detecta dependencia PostgreSQL real caida {"status":503,"response":{"status":"DOWN"}}
+VERIFICADO: Peticion dependiente de BD falla de forma observable {"status":500,"response":{"timestamp":"2026-11-06T03:32:35.043Z","status":500,"error":"Internal Server Error","path":"/api/v1/clientes"}}
+VERIFICADO: Readiness vuelve a UP tras recuperar PostgreSQL {"status":200,"response":{"status":"UP"}}
+VERIFICADO: Prometheus recoge objetivos reales {"data":[{"metric":{"__name__":"up","instance":"host.docker.internal:8083","job":"pagatu"},"value":[1793935960.693,"1"]},{"metric":{"__name__":"up","instance":"host.docker.internal:8084","job":"pagatu"},"value":[1793935960.693,"1"]},{"metric":{"__name__":"up","instance":"host.docker.internal:19000","job":"keycloak"},"value":[1793935960.693,"1"]},{"metric":{"__name__":"up","instance":"host.docker.internal:8082","job":"pagatu"},"value":[1793935960.693,"1"]},{"metric":{"__name__":"up","instance":"host.docker.internal:18080","job":"pagatu"},"value":[1793935960.693,"1"]},{"metric":{"__name__":"up","instance":"host.docker.internal:8080","job":"pagatu"},"value":[1793935960.693,"1"]}]}
+VERIFICADO: Consulta real a Loki con trace de orden {"status":200,"streams":[{"application":"pagatu-catalogo-ms","detected_level":"info","filename":"/logs/catalogo/catalogo.log","service_name":"pagatu-catalogo-ms"},{"application":"pagatu-cliente-ms","detected_level":"info","filename":"/logs/cliente/cliente.log","service_name":"pagatu-cliente-ms"},{"application":"pagatu-orden-ms","detected_level":"info","filename":"/logs/orden/orden.log","service_name":"pagatu-orden-ms"},{"application":"pagatu-pago-ms","detected_level":"info","filename":"/logs/pago/pago.log","service_name":"pagatu-pago-ms"}]}
+REPORTE: platform/runtime/evidencias-20261105/s10.json
+**********************
+PowerShell transcript end
+End time: 20261105223241
+**********************

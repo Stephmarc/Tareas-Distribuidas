@@ -1,0 +1,50 @@
+**********************
+PowerShell transcript start
+Start time: 20261105225906
+Username: STEPHANI\grace
+RunAs User: STEPHANI\grace
+Configuration Name: 
+Machine: STEPHANI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Users\grace\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+Copy-Item -LiteralPath 'platform\runtime\evidencias-20261105\s08.json' -Destination 'platform\runtime\evidencias-20261105\s08-intento-codificacion.json'
+Copy-Item -LiteralPath 'platform\runtime\evidencias-20261105\s08-powershell.txt' -Destination 'platform\runtime\evidencias-20261105\s08-intento-codificacion-powershell.txt'
+Copy-Item -LiteralPath 'C:\Users\grace\Documents\Codex\2026-10-29\oa\work\PersonalRuntime.cjs' -Destination scripts\PersonalRuntime.cjs
+& .\platform\runtime\node24.exe .\scripts\Recover-Personal.cjs
+if ($LASTEXITCODE -ne 0) { throw 'No se pudo verificar la recuperacion.' }
+& .\scripts\Run-PersonalEvidence.ps1 -Sesion s08
+& .\scripts\Run-PersonalEvidence.ps1 -Sesion s09
+Process ID: 26256
+PSVersion: 7.6.9
+PSEdition: Core
+GitCommitId: 7.6.9
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu\platform\runtime\evidencias-20261105\s09-powershell.txt
+Estudiante: Jannys Graciela Navarro Acrota | Tarea personal | s09
+Fecha real: 2026-11-05T22:59:06.2751964-05:00 | Windows: STEPHANI\grace
+Directorio de trabajo: C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu
+COMANDO EJECUTADO: node scripts/Verify-Personal.cjs s09
+TAREA PERSONAL · S09 · 5/11/2026, 22:59:06 · Windows: grace
+VERIFICADO: POST orden autenticada {"status":201,"request":{"metodoPago":"YAPE_PLIN","detalles":[{"idProducto":1,"cantidad":2}]},"response":{"id":55,"nombre":"Orden de 891b60fa-0606-48a7-bd4c-7ef9ed5eabdf","descripcion":null,"clienteId":"891b60fa-0606-48a7-bd4c-7ef9ed5eabdf","estado":"PENDIENTE_PAGO","total":31,"detalles":[{"id":55,"nombreProducto":"Producto de prueba","productoId":1,"cantidad":2,"precioUnitario":15.5,"ordenId":55}]},"trace":"personal-s09-d0c37f09-9208-42e8-8f92-4afa78ce74d3"}
+VERIFICADO: Estado final de orden 55 {"estado":"PAGADA","total":31}
+VERIFICADO: POST orden autenticada {"status":201,"request":{"metodoPago":"RECHAZADO","detalles":[{"idProducto":1,"cantidad":2}]},"response":{"id":56,"nombre":"Orden de 891b60fa-0606-48a7-bd4c-7ef9ed5eabdf","descripcion":null,"clienteId":"891b60fa-0606-48a7-bd4c-7ef9ed5eabdf","estado":"PENDIENTE_PAGO","total":31,"detalles":[{"id":56,"nombreProducto":"Producto de prueba","productoId":1,"cantidad":2,"precioUnitario":15.5,"ordenId":56}]},"trace":"personal-s09-58efecf3-12de-4d4f-96ad-b150a4af4ccb"}
+VERIFICADO: Estado final de orden 56 {"estado":"CANCELADA","total":31}
+COMANDO: kafka-console-producer.sh --topic orden-eventos (mismo mensaje original)
+COMANDO: kafka-console-producer.sh --topic orden-eventos (mismo mensaje original)
+VERIFICADO: Duplicado de orden no duplica pago {"orden":55,"filas":1}
+VERIFICADO: Duplicado de orden no duplica pago {"orden":56,"filas":1}
+COMANDO: kafka-console-producer.sh --topic pago-eventos (mismo mensaje original)
+VERIFICADO: Estado final de orden 56 {"estado":"CANCELADA","total":31}
+COMANDO: kafka-console-producer.sh --topic cliente-eventos (mismo mensaje original)
+VERIFICADO: Compensacion duplicada no duplica aviso {"orden":56,"filas":1}
+VERIFICADO: Conflicto SQL real reproducido de forma aislada {"error":"ERROR:  duplicate key value violates unique constraint \"pagos_orden_id_key\"\nDETAIL:  Key (orden_id)=(55) already exists.\n"}
+REPORTE: platform/runtime/evidencias-20261105/s09.json
+**********************
+PowerShell transcript end
+End time: 20261105225947
+**********************

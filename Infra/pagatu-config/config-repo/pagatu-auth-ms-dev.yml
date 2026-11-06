@@ -31,6 +31,6 @@ management:
           include: readinessState,db
 logging:
   file:
-    name: logs/cliente.log
+    name: logs/auth.log
   pattern:
     level: "%5p [traceId=%X{traceId}]"

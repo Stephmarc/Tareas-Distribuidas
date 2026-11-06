@@ -1,0 +1,431 @@
+{
+  "sesion": "s10",
+  "fecha": "2026-11-06T03:31:32.879Z",
+  "usuarioWindows": "grace",
+  "estudiante": "Jannys Graciela Navarro Acrota",
+  "pasos": [
+    {
+      "prueba": "Cliente liveness antes de falla",
+      "status": 200,
+      "response": {
+        "status": "UP"
+      }
+    },
+    {
+      "prueba": "Cliente readiness antes de falla",
+      "status": 200,
+      "response": {
+        "status": "UP"
+      }
+    },
+    {
+      "prueba": "Proceso vivo con PostgreSQL detenido",
+      "status": 200,
+      "response": {
+        "status": "UP"
+      }
+    },
+    {
+      "prueba": "Readiness detecta dependencia PostgreSQL real caida",
+      "status": 503,
+      "response": {
+        "status": "DOWN"
+      }
+    },
+    {
+      "prueba": "Peticion dependiente de BD falla de forma observable",
+      "status": 500,
+      "response": {
+        "timestamp": "2026-11-06T03:32:35.043Z",
+        "status": 500,
+        "error": "Internal Server Error",
+        "path": "/api/v1/clientes"
+      }
+    },
+    {
+      "prueba": "Readiness vuelve a UP tras recuperar PostgreSQL",
+      "status": 200,
+      "response": {
+        "status": "UP"
+      }
+    },
+    {
+      "prueba": "Prometheus recoge objetivos reales",
+      "data": [
+        {
+          "metric": {
+            "__name__": "up",
+            "instance": "host.docker.internal:8083",
+            "job": "pagatu"
+          },
+          "value": [
+            1793935960.693,
+            "1"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "up",
+            "instance": "host.docker.internal:8084",
+            "job": "pagatu"
+          },
+          "value": [
+            1793935960.693,
+            "1"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "up",
+            "instance": "host.docker.internal:19000",
+            "job": "keycloak"
+          },
+          "value": [
+            1793935960.693,
+            "1"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "up",
+            "instance": "host.docker.internal:8082",
+            "job": "pagatu"
+          },
+          "value": [
+            1793935960.693,
+            "1"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "up",
+            "instance": "host.docker.internal:18080",
+            "job": "pagatu"
+          },
+          "value": [
+            1793935960.693,
+            "1"
+          ]
+        },
+        {
+          "metric": {
+            "__name__": "up",
+            "instance": "host.docker.internal:8080",
+            "job": "pagatu"
+          },
+          "value": [
+            1793935960.693,
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "prueba": "Consulta real a Loki con trace de orden",
+      "status": 200,
+      "streams": [
+        {
+          "application": "pagatu-catalogo-ms",
+          "detected_level": "info",
+          "filename": "/logs/catalogo/catalogo.log",
+          "service_name": "pagatu-catalogo-ms"
+        },
+        {
+          "application": "pagatu-cliente-ms",
+          "detected_level": "info",
+          "filename": "/logs/cliente/cliente.log",
+          "service_name": "pagatu-cliente-ms"
+        },
+        {
+          "application": "pagatu-orden-ms",
+          "detected_level": "info",
+          "filename": "/logs/orden/orden.log",
+          "service_name": "pagatu-orden-ms"
+        },
+        {
+          "application": "pagatu-pago-ms",
+          "detected_level": "info",
+          "filename": "/logs/pago/pago.log",
+          "service_name": "pagatu-pago-ms"
+        }
+      ]
+    }
+  ],
+  "loki": {
+    "query": "{application=~\"pagatu-.*\"} |= \"personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53\"",
+    "response": {
+      "status": "success",
+      "data": {
+        "resultType": "streams",
+        "result": [
+          {
+            "stream": {
+              "application": "pagatu-catalogo-ms",
+              "detected_level": "info",
+              "filename": "/logs/catalogo/catalogo.log",
+              "service_name": "pagatu-catalogo-ms"
+            },
+            "values": [
+              [
+                "1793935855562849931",
+                "2026-11-05T22:30:55.352-05:00  INFO [traceId=personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-1] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1\r"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "application": "pagatu-cliente-ms",
+              "detected_level": "info",
+              "filename": "/logs/cliente/cliente.log",
+              "service_name": "pagatu-cliente-ms"
+            },
+            "values": [
+              [
+                "1793935858010901953",
+                "2026-11-05T22:30:57.880-05:00  INFO [traceId=] 22964 --- [pagatu-cliente-ms] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] p.edu.upeu.cliente.event.AvisoListener   : Aviso registrado orden=50 evento=orden.confirmada resultado=aplicado traceId=personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53\r"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "application": "pagatu-orden-ms",
+              "detected_level": "info",
+              "filename": "/logs/orden/orden.log",
+              "service_name": "pagatu-orden-ms"
+            },
+            "values": [
+              [
+                "1793935858010884889",
+                "2026-11-05 22:30:57.872 [] INFO  p.edu.upeu.orden.event.OutboxService - Evento publicado topic=cliente-eventos key=50 payload={\"tipoEvento\":\"orden.confirmada\",\"ordenId\":50,\"clienteId\":\"891b60fa-0606-48a7-bd4c-7ef9ed5eabdf\",\"total\":31.00,\"metodoPago\":\"YAPE_PLIN\",\"traceId\":\"personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53\"}\r"
+              ],
+              [
+                "1793935856251921559",
+                "2026-11-05 22:30:56.037 [personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53] INFO  p.edu.upeu.orden.event.PagoListener - Saga orden=50 estado=PAGADA resultado=aplicado\r"
+              ],
+              [
+                "1793935855999440314",
+                "2026-11-05 22:30:55.778 [] INFO  p.edu.upeu.orden.event.OutboxService - Evento publicado topic=orden-eventos key=50 payload={\"tipoEvento\":\"orden.creada\",\"ordenId\":50,\"clienteId\":\"891b60fa-0606-48a7-bd4c-7ef9ed5eabdf\",\"total\":31.00,\"metodoPago\":\"YAPE_PLIN\",\"traceId\":\"personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53\"}\r"
+              ],
+              [
+                "1793935855495549451",
+                "2026-11-05 22:30:55.335 [personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53] INFO  p.e.u.o.filter.CorrelationIdFilter - POST /api/v1/ordenes\r"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "application": "pagatu-pago-ms",
+              "detected_level": "info",
+              "filename": "/logs/pago/pago.log",
+              "service_name": "pagatu-pago-ms"
+            },
+            "values": [
+              [
+                "1793935864059340814",
+                "2026-11-05T22:31:03.985-05:00  INFO [traceId=personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53] 35412 --- [pagatu-pago-ms] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] pe.edu.upeu.pago.event.OrdenListener     : Pago duplicado ignorado orden=50\r"
+              ],
+              [
+                "1793935856251950041",
+                "2026-11-05T22:30:56.026-05:00  INFO [traceId=] 35412 --- [pagatu-pago-ms] [scheduling-1] pe.edu.upeu.pago.event.OutboxService     : Evento publicado topic=pago-eventos key=50 payload={\"tipoEvento\":\"pago.validado\",\"ordenId\":50,\"clienteId\":\"891b60fa-0606-48a7-bd4c-7ef9ed5eabdf\",\"total\":31.00,\"metodoPago\":\"YAPE_PLIN\",\"traceId\":\"personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53\"}\r"
+              ],
+              [
+                "1793935855999075817",
+                "2026-11-05T22:30:55.791-05:00  INFO [traceId=personal-s09-949f5ba1-c4da-45d3-bed1-b8f62357dc53] 35412 --- [pagatu-pago-ms] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] pe.edu.upeu.pago.event.OrdenListener     : Pago orden=50 estado=VALIDADO\r"
+              ]
+            ]
+          }
+        ],
+        "stats": {
+          "summary": {
+            "bytesProcessedPerSecond": 80023233,
+            "linesProcessedPerSecond": 379673,
+            "totalBytesProcessed": 39917458,
+            "totalLinesProcessed": 189390,
+            "execTime": 0.498823,
+            "queueTime": 0.004401,
+            "subqueries": 0,
+            "totalEntriesReturned": 9,
+            "splits": 2,
+            "shards": 2,
+            "totalPostFilterLines": 9,
+            "totalStructuredMetadataBytesProcessed": 5551152
+          },
+          "querier": {
+            "store": {
+              "totalChunksRef": 0,
+              "totalChunksDownloaded": 0,
+              "chunksDownloadTime": 0,
+              "queryReferencedStructuredMetadata": false,
+              "queryUsedV2Engine": false,
+              "chunk": {
+                "headChunkBytes": 0,
+                "headChunkLines": 0,
+                "decompressedBytes": 0,
+                "decompressedLines": 0,
+                "compressedBytes": 0,
+                "totalDuplicates": 0,
+                "postFilterLines": 0,
+                "headChunkStructuredMetadataBytes": 0,
+                "decompressedStructuredMetadataBytes": 0
+              },
+              "chunkRefsFetchTime": 0,
+              "congestionControlLatency": 0,
+              "pipelineWrapperFilteredLines": 0,
+              "dataobj": {
+                "prePredicateDecompressedRows": 0,
+                "prePredicateDecompressedBytes": 0,
+                "prePredicateDecompressedStructuredMetadataBytes": 0,
+                "postPredicateRows": 0,
+                "postPredicateDecompressedBytes": 0,
+                "postPredicateStructuredMetadataBytes": 0,
+                "postFilterRows": 0,
+                "pagesScanned": 0,
+                "pagesDownloaded": 0,
+                "pagesDownloadedBytes": 0,
+                "pageBatches": 0,
+                "totalRowsAvailable": 0,
+                "totalPageDownloadTime": 0
+              }
+            },
+            "querierExecTime": 0.98801
+          },
+          "ingester": {
+            "totalReached": 2,
+            "totalChunksMatched": 8,
+            "totalBatches": 3,
+            "totalLinesSent": 9,
+            "store": {
+              "totalChunksRef": 10,
+              "totalChunksDownloaded": 10,
+              "chunksDownloadTime": 97634405,
+              "queryReferencedStructuredMetadata": false,
+              "queryUsedV2Engine": false,
+              "chunk": {
+                "headChunkBytes": 900105,
+                "headChunkLines": 5934,
+                "decompressedBytes": 39017353,
+                "decompressedLines": 183456,
+                "compressedBytes": 3516157,
+                "totalDuplicates": 0,
+                "postFilterLines": 9,
+                "headChunkStructuredMetadataBytes": 47472,
+                "decompressedStructuredMetadataBytes": 5503680
+              },
+              "chunkRefsFetchTime": 5586497,
+              "congestionControlLatency": 0,
+              "pipelineWrapperFilteredLines": 0,
+              "dataobj": {
+                "prePredicateDecompressedRows": 0,
+                "prePredicateDecompressedBytes": 0,
+                "prePredicateDecompressedStructuredMetadataBytes": 0,
+                "postPredicateRows": 0,
+                "postPredicateDecompressedBytes": 0,
+                "postPredicateStructuredMetadataBytes": 0,
+                "postFilterRows": 0,
+                "pagesScanned": 0,
+                "pagesDownloaded": 0,
+                "pagesDownloadedBytes": 0,
+                "pageBatches": 0,
+                "totalRowsAvailable": 0,
+                "totalPageDownloadTime": 0
+              }
+            },
+            "recvWaitTime": 0.468563
+          },
+          "cache": {
+            "chunk": {
+              "entriesFound": 0,
+              "entriesRequested": 0,
+              "entriesStored": 0,
+              "bytesReceived": 0,
+              "bytesSent": 0,
+              "requests": 0,
+              "downloadTime": 0,
+              "queryLengthServed": 0
+            },
+            "index": {
+              "entriesFound": 0,
+              "entriesRequested": 0,
+              "entriesStored": 0,
+              "bytesReceived": 0,
+              "bytesSent": 0,
+              "requests": 0,
+              "downloadTime": 0,
+              "queryLengthServed": 0
+            },
+            "result": {
+              "entriesFound": 0,
+              "entriesRequested": 0,
+              "entriesStored": 0,
+              "bytesReceived": 0,
+              "bytesSent": 0,
+              "requests": 0,
+              "downloadTime": 0,
+              "queryLengthServed": 0
+            },
+            "statsResult": {
+              "entriesFound": 1,
+              "entriesRequested": 1,
+              "entriesStored": 0,
+              "bytesReceived": 199,
+              "bytesSent": 0,
+              "requests": 1,
+              "downloadTime": 839440,
+              "queryLengthServed": 1670000000000
+            },
+            "volumeResult": {
+              "entriesFound": 0,
+              "entriesRequested": 0,
+              "entriesStored": 0,
+              "bytesReceived": 0,
+              "bytesSent": 0,
+              "requests": 0,
+              "downloadTime": 0,
+              "queryLengthServed": 0
+            },
+            "seriesResult": {
+              "entriesFound": 0,
+              "entriesRequested": 0,
+              "entriesStored": 0,
+              "bytesReceived": 0,
+              "bytesSent": 0,
+              "requests": 0,
+              "downloadTime": 0,
+              "queryLengthServed": 0
+            },
+            "labelResult": {
+              "entriesFound": 0,
+              "entriesRequested": 0,
+              "entriesStored": 0,
+              "bytesReceived": 0,
+              "bytesSent": 0,
+              "requests": 0,
+              "downloadTime": 0,
+              "queryLengthServed": 0
+            },
+            "instantMetricResult": {
+              "entriesFound": 0,
+              "entriesRequested": 0,
+              "entriesStored": 0,
+              "bytesReceived": 0,
+              "bytesSent": 0,
+              "requests": 0,
+              "downloadTime": 0,
+              "queryLengthServed": 0
+            }
+          },
+          "index": {
+            "totalChunks": 0,
+            "postFilterChunks": 0,
+            "shardsDuration": 0,
+            "usedBloomFilters": false,
+            "totalStreams": 0,
+            "chunkRefsLookupTime": 0,
+            "bloomFilterTime": 0
+          }
+        }
+      }
+    }
+  },
+  "resultado": "APROBADO"
+}

@@ -1,0 +1,57 @@
+**********************
+PowerShell transcript start
+Start time: 20261105225657
+Username: STEPHANI\grace
+RunAs User: STEPHANI\grace
+Configuration Name: 
+Machine: STEPHANI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Users\grace\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+Copy-Item -LiteralPath 'platform\runtime\evidencias-20261105\s08.json' -Destination 'platform\runtime\evidencias-20261105\s08-intento-codificacion.json'
+Copy-Item -LiteralPath 'platform\runtime\evidencias-20261105\s08-powershell.txt' -Destination 'platform\runtime\evidencias-20261105\s08-intento-codificacion-powershell.txt'
+Copy-Item -LiteralPath 'C:\Users\grace\Documents\Codex\2026-10-29\oa\work\PersonalRuntime.cjs' -Destination scripts\PersonalRuntime.cjs
+& .\platform\runtime\node24.exe .\scripts\Recover-Personal.cjs
+if ($LASTEXITCODE -ne 0) { throw 'No se pudo verificar la recuperacion.' }
+& .\scripts\Run-PersonalEvidence.ps1 -Sesion s08
+& .\scripts\Run-PersonalEvidence.ps1 -Sesion s09
+Process ID: 26256
+PSVersion: 7.6.9
+PSEdition: Core
+GitCommitId: 7.6.9
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu\platform\runtime\evidencias-20261105\s08-powershell.txt
+Estudiante: Jannys Graciela Navarro Acrota | Tarea personal | s08
+Fecha real: 2026-11-05T22:56:57.7423094-05:00 | Windows: STEPHANI\grace
+Directorio de trabajo: C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu
+COMANDO EJECUTADO: node scripts/Verify-Personal.cjs s08
+TAREA PERSONAL · S08 · 5/11/2026, 22:56:57 · Windows: grace
+CONTROL REAL: pagatu-pago-ms Stop issuer Keycloak
+Proceso propio detenido PID 35412
+VERIFICADO: POST orden autenticada {"status":201,"request":{"metodoPago":"YAPE_PLIN","detalles":[{"idProducto":1,"cantidad":2}]},"response":{"id":53,"nombre":"Orden de 891b60fa-0606-48a7-bd4c-7ef9ed5eabdf","descripcion":null,"clienteId":"891b60fa-0606-48a7-bd4c-7ef9ed5eabdf","estado":"PENDIENTE_PAGO","total":31,"detalles":[{"id":53,"nombreProducto":"Producto de prueba","productoId":1,"cantidad":2,"precioUnitario":15.5,"ordenId":53}]},"trace":"personal-s08-2dd947a0-1c6e-44b5-9330-8a501e094d37"}
+VERIFICADO: Orden persiste con consumidor pago apagado {"orden":53,"estado":"PENDIENTE_PAGO"}
+GROUP           TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                                 HOST            CLIENT-ID
+pagatu-pago     orden-eventos   0          40              41              1               consumer-pagatu-pago-1-4a7a723a-bc37-4a72-843c-14b69e1fb62f /172.21.0.1     consumer-pagatu-pago-1
+VERIFICADO: Lag real del consumidor detenido {"salida":"GROUP           TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                                 HOST            CLIENT-ID\npagatu-pago     orden-eventos   0          40              41              1               consumer-pagatu-pago-1-4a7a723a-bc37-4a72-843c-14b69e1fb62f /172.21.0.1     consumer-pagatu-pago-1"}
+CONTROL REAL: pagatu-pago-ms Start issuer Keycloak
+Servicio UP http://localhost:8084/actuator/health/liveness PID 37148
+VERIFICADO: Estado final de orden 53 {"estado":"PAGADA","total":31}
+CONTROL REAL: pagatu-cliente-ms Stop issuer Keycloak
+Proceso propio detenido PID 40308
+VERIFICADO: POST orden autenticada {"status":201,"request":{"metodoPago":"YAPE_PLIN","detalles":[{"idProducto":1,"cantidad":2}]},"response":{"id":54,"nombre":"Orden de 891b60fa-0606-48a7-bd4c-7ef9ed5eabdf","descripcion":null,"clienteId":"891b60fa-0606-48a7-bd4c-7ef9ed5eabdf","estado":"PENDIENTE_PAGO","total":31,"detalles":[{"id":54,"nombreProducto":"Producto de prueba","productoId":1,"cantidad":2,"precioUnitario":15.5,"ordenId":54}]},"trace":"personal-s08-30a55dfd-dc9a-4b42-b662-4375c6f0f281"}
+VERIFICADO: Estado final de orden 54 {"estado":"PAGADA","total":31}
+GROUP                 TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                                           HOST            CLIENT-ID
+pagatu-cliente-avisos cliente-eventos 0          39              40              1               consumer-pagatu-cliente-avisos-1-0d6ee5bb-0f67-4a5f-ba6c-3240bddc5a22 /172.21.0.1     consumer-pagatu-cliente-avisos-1
+VERIFICADO: Evento propio orden.confirmada espera a cliente-ms {"orden":54,"salida":"GROUP                 TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                                           HOST            CLIENT-ID\npagatu-cliente-avisos cliente-eventos 0          39              40              1               consumer-pagatu-cliente-avisos-1-0d6ee5bb-0f67-4a5f-ba6c-3240bddc5a22 /172.21.0.1     consumer-pagatu-cliente-avisos-1"}
+CONTROL REAL: pagatu-cliente-ms Start issuer Keycloak
+Servicio UP http://localhost:8083/actuator/health/liveness PID 12792
+VERIFICADO: Cliente consume evento propio despues de recuperarse {"orden":54,"avisos":1}
+REPORTE: platform/runtime/evidencias-20261105/s08.json
+**********************
+PowerShell transcript end
+End time: 20261105225906
+**********************

@@ -19,7 +19,7 @@ nav:
       - S01 · Servicio base: index.md
       - S02 · Configuración centralizada: S02/index.md
       - S03 · Eureka: S03/index.md
-      - Revisión y pendientes S04–S05: Unidad1/auditoria.md
+      - S04–S05 · Revisión y consolidación: Unidad1/auditoria.md
   - Unidad 2:
       - Presentación: Unidad2/index.md
       - S06 · Comunicación síncrona resiliente: Unidad2/S06/index.md
@@ -29,6 +29,7 @@ nav:
       - S10 · Observabilidad y diagnóstico: Unidad2/S10/index.md
       - S11 · Integración del cliente Angular con Keycloak: Unidad2/S11/index.md
       - Pruebas realizadas: Unidad2/verificacion.md
+      - Reproducir las prácticas: Unidad2/reproduccion.md
 markdown_extensions:
   - admonition
   - attr_list

@@ -1,22 +1,213 @@
-# Unidad 1 · Revisión del trabajo previo
+# Unidad 1 · Revisión y consolidación
 
-**Estudiante:** Jannys Graciela Navarro Acrota  
-**Grupo:** Casa o Nada  
-**Repositorio:** [Stephmarc/Tareas-Distribuidas](https://github.com/Stephmarc/Tareas-Distribuidas)  
-**Aporte:** evolución del servicio de órdenes y su integración con infraestructura y servicios separados.
+**Jannys Graciela Navarro Acrota · Tarea personal**
 
-## Estado encontrado
+Se conserva el material anterior y se añade una comprobación nueva del 5/11/2026. Los pendientes ya comprobados no siguen figurando como si nunca se hubieran ejecutado.
 
-| Sesión | Archivos encontrados | Hallazgo |
-| --- | --- | --- |
-| S01 | CRUD de órdenes, Flyway, DTO, imágenes | Se conserva el trabajo. No se ha repetido toda la prueba de dos instancias. |
-| S02 | Config Server, perfiles de órdenes y documento | Se conserva. Falta nueva verificación conjunta. |
-| S03 | Eureka y documento con dashboard | El informe reconoce que las instancias no llegaron a verse. Eureka Client estaba solo en dependencyManagement; corregido. |
-| S04 | No había Gateway | Se añadió el módulo y sus rutas por nombre lógico. Falta evidencia de distribución entre dos instancias. |
-| S05 | No había informe de consolidación | La evaluación requiere demostración y defensa; no se inventa un resultado. |
+| Sesión | Estado comprobado |
+|---|---|
+| S01 · Servicio base | Persistencia y migraciones de órdenes conservadas; evolución actual de creación/consulta probada en S06 y S07. El CRUD autónomo completo actual es cliente-ms. |
+| S02 · Config Server | Órdenes y cliente recuperan sus perfiles dev reales del servidor 18888. |
+| S03 · Eureka | Órdenes, cliente, pago, catálogo y Gateway aparecen registrados. |
+| S04 · Gateway y balanceo | Dos procesos de catálogo, 8080 y 8086, registrados UP; llamadas al Gateway aparecen en ambos logs. |
+| S05 · Consolidación | Informe de consolidación escrito; demostración local probada. La defensa y evaluación docente no se atribuyen como realizadas. |
 
-## Ajustes realizados
+## Prueba real de dos instancias
 
-El Gateway ahora permite continuar la unidad 2 sin llamar desde Angular directamente a cada microservicio. Las tablas originales de órdenes se conservan. Las modificaciones de esquema usan V2 y V3, para evitar editar migraciones aplicadas o reiniciar datos existentes.
+```powershell
+& ".\scripts\Verify-Unit1.ps1"
+```
 
-La revisión no convierte pendientes anteriores en actividades aprobadas: la evidencia debe completarse con los servicios funcionando.
+El script arranca una instancia temporal de catálogo en 8086, espera a Eureka y realiza peticiones al Gateway. Comprueba el mismo prefijo de correlación en los logs de 8080 y 8086. Al terminar detiene solamente su instancia temporal y conserva el proceso principal.
+
+La caché de descubrimiento del Gateway tardó en incorporar la segunda instancia: las primeras peticiones llegaron a 8080 y una posterior a 8086. No se afirma que alternaran desde la primera petición. Las dos instancias comparten la base de su mismo dominio catálogo; los dominios de órdenes, cliente y pago tienen bases distintas.
+
+[Reporte original](assets/unidad1.json) · [Transcript PowerShell](assets/unidad1-powershell.txt)
+
+```json
+{
+  "fecha": "2026-11-06T03:36:41.084Z",
+  "usuarioWindows": "grace",
+  "resultado": "APROBADO",
+  "instancias": [
+    {
+      "instanceId": "Stephani.mshome.net:pagatu-catalogo-ms:8080",
+      "status": "UP",
+      "port": 8080
+    },
+    {
+      "instanceId": "personal-catalogo-8086",
+      "status": "UP",
+      "port": 8086
+    }
+  ],
+  "peticionesGateway": [
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-0",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-1",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-2",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-3",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-4",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-5",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-6",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-7",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-8",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-9",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-10",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-11",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-12",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-13",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-14",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-15",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-16",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-17",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-18",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-19",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-20",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-21",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-22",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-23",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-24",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-25",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-26",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-27",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-28",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-29",
+      "status": 200
+    },
+    {
+      "trace": "unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-30",
+      "status": 200
+    }
+  ],
+  "logs": {
+    "puerto8080": [
+      "2026-11-05T22:36:01.226-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-0] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-6] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:02.460-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-1] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-7] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:03.699-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-2] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-8] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:04.951-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-3] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-9] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:06.221-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-4] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-1] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:07.461-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-5] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-2] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:08.705-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-6] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-3] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:09.949-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-7] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-4] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:11.184-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-8] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-6] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:12.425-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-9] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-7] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:13.662-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-10] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-8] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:14.903-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-11] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-9] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:16.146-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-12] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-1] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:17.396-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-13] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-2] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:18.633-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-14] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-3] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:19.868-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-15] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-4] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:21.122-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-16] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-6] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:22.374-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-17] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-7] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:23.606-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-18] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-8] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:24.841-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-19] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-9] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:26.083-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-20] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-1] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:27.311-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-21] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-2] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:28.549-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-22] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-3] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:29.791-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-23] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-4] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:31.032-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-24] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-6] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:32.269-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-25] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-7] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:33.505-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-26] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-8] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:34.747-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-27] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-9] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:35.989-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-28] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-1] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1",
+      "2026-11-05T22:36:37.221-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-29] 30908 --- [pagatu-catalogo-ms] [http-nio-8080-exec-2] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1"
+    ],
+    "puerto8086": [
+      "2026-11-05T22:36:39.293-05:00  INFO [traceId=unidad1-lb-fc48fd7e-2075-4d6b-bb24-4d1d5e466c66-30] 27700 --- [pagatu-catalogo-ms] [http-nio-8086-exec-1] p.edu.upeu.catalogo.CorrelationIdFilter  : GET /api/v1/productos/1"
+    ]
+  },
+  "alcance": "Una misma aplicacion catalogo con dos procesos y puertos; comparten su propia base de catalogo, no bases entre dominios."
+}
+```
+
+## Evolución entre unidades
+
+La base de servicio y persistencia de Unidad 1 ahora se integra por Gateway y Eureka. Unidad 2 incorpora Feign y Circuit Breaker, JWT/Keycloak, Kafka con outbox, consumidores idempotentes, compensación, observabilidad y una SPA con estado pendiente explícito. Las comprobaciones detalladas están en [Unidad 2](../Unidad2/index.md).

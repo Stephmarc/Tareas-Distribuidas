@@ -1,0 +1,31 @@
+{
+  "sesion": "S11",
+  "fecha": "2026-11-06T03:31:43.079Z",
+  "usuarioWindows": "grace",
+  "cuentaFrontend": "demo-unidad2",
+  "cliente": {
+    "clientId": "pagatu-frontend",
+    "publicClient": true,
+    "standardFlowEnabled": true,
+    "directAccessGrantsEnabled": false,
+    "pkce": "S256",
+    "redirectUris": [
+      "http://localhost:4200/*"
+    ]
+  },
+  "pasos": [
+    "Inicio de sesion real con Keycloak: Authorization Code, state y code_challenge_method=S256 visibles en URL de autorizacion.",
+    "Pago detenido: UI crea ordenes 48 y 49 y muestra PENDIENTE_PAGO.",
+    "Pago recuperado: polling de 2 segundos actualiza 48 PAGADA y 49 CANCELADA sin pulsar Actualizar."
+  ],
+  "consulta": "SELECT id,cliente_id,estado,total FROM ordenes WHERE id IN (48,49) ORDER BY id",
+  "filas": "48|bbd5e8a1-00fd-4b2f-ace7-0d1df66f8968|PAGADA|31.00\n49|bbd5e8a1-00fd-4b2f-ace7-0d1df66f8968|CANCELADA|31.00",
+  "resultado": "APROBADO",
+  "limite": "No se publica el JWT ni el code_verifier; se comparó SHA-256(verifier) con el challenge y se registraron únicamente booleanos y código HTTP.",
+  "pkceComprobadoEnNavegador": {
+    "stateCoincide": true,
+    "verifierS256Coincide": true,
+    "http": 200,
+    "fecha": "2026-11-06T03:57:31.269Z"
+  }
+}

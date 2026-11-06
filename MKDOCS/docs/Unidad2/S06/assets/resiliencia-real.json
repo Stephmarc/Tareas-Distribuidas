@@ -1,0 +1,106 @@
+{
+  "fecha": "2026-11-06T03:22:54.192Z",
+  "tipoFallo": "Proceso de catálogo detenido y recuperado desde PowerShell",
+  "carritos": [
+    {
+      "id": 33,
+      "estado": "CARRITO",
+      "total": null
+    },
+    {
+      "id": 34,
+      "estado": "CARRITO",
+      "total": null
+    },
+    {
+      "id": 35,
+      "estado": "CARRITO",
+      "total": null
+    },
+    {
+      "id": 36,
+      "estado": "CARRITO",
+      "total": null
+    },
+    {
+      "id": 37,
+      "estado": "CARRITO",
+      "total": null
+    }
+  ],
+  "estados": [
+    {
+      "fecha": "2026-11-06T03:22:55.088Z",
+      "state": "OPEN",
+      "data": {
+        "circuitBreakers": {
+          "catalogo": {
+            "bufferedCalls": 5,
+            "failedCalls": 3,
+            "failureRate": "60.0%",
+            "failureRateThreshold": "50.0%",
+            "notPermittedCalls": 2,
+            "slowCallRate": "0.0%",
+            "slowCallRateThreshold": "100.0%",
+            "slowCalls": 0,
+            "slowFailedCalls": 0,
+            "state": "OPEN"
+          }
+        }
+      }
+    },
+    {
+      "fecha": "2026-11-06T03:23:06.120Z",
+      "state": "HALF_OPEN",
+      "data": {
+        "circuitBreakers": {
+          "catalogo": {
+            "bufferedCalls": 0,
+            "failedCalls": 0,
+            "failureRate": "-1.0%",
+            "failureRateThreshold": "50.0%",
+            "notPermittedCalls": 0,
+            "slowCallRate": "-1.0%",
+            "slowCallRateThreshold": "100.0%",
+            "slowCalls": 0,
+            "slowFailedCalls": 0,
+            "state": "HALF_OPEN"
+          }
+        }
+      }
+    },
+    {
+      "fecha": "2026-11-06T03:23:39.100Z",
+      "state": "CLOSED",
+      "data": {
+        "circuitBreakers": {
+          "catalogo": {
+            "bufferedCalls": 0,
+            "failedCalls": 0,
+            "failureRate": "-1.0%",
+            "failureRateThreshold": "50.0%",
+            "notPermittedCalls": 0,
+            "slowCallRate": "-1.0%",
+            "slowCallRateThreshold": "100.0%",
+            "slowCalls": 0,
+            "slowFailedCalls": 0,
+            "state": "CLOSED"
+          }
+        }
+      }
+    }
+  ],
+  "recuperacion": [
+    {
+      "id": 38,
+      "estado": "PENDIENTE_PAGO",
+      "total": 15.5
+    },
+    {
+      "id": 39,
+      "estado": "PENDIENTE_PAGO",
+      "total": 15.5
+    }
+  ],
+  "resultado": "APROBADO"
+}

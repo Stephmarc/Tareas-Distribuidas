@@ -1,0 +1,84 @@
+{
+  "sesion": "S07-JWT-propio-ResourceServers",
+  "fecha": "2026-11-06T03:42:27.183Z",
+  "usuarioWindows": "grace",
+  "pasos": [
+    {
+      "prueba": "Registro propio",
+      "status": 201,
+      "usuario": {
+        "username": "legacy-evidencia-1793936547203",
+        "id": 3
+      }
+    },
+    {
+      "prueba": "Sin JWT",
+      "status": 401,
+      "url": "http://localhost:18080/api/v1/ordenes",
+      "issuer": "http://localhost:8085"
+    },
+    {
+      "prueba": "JWT alterado",
+      "status": 401,
+      "url": "http://localhost:18080/api/v1/ordenes",
+      "issuer": "http://localhost:8085"
+    },
+    {
+      "prueba": "CLIENTE no es ADMIN",
+      "status": 403,
+      "url": "http://localhost:18080/api/v1/clientes",
+      "issuer": "http://localhost:8085"
+    },
+    {
+      "prueba": "Cliente directo JWT alterado",
+      "status": 401,
+      "url": "http://localhost:8083/api/v1/clientes",
+      "issuer": "http://localhost:8085"
+    },
+    {
+      "prueba": "Orden directa sin token",
+      "status": 401,
+      "url": "http://localhost:8082/api/v1/ordenes",
+      "issuer": "http://localhost:8085"
+    },
+    {
+      "prueba": "Orden con identidad del JWT propio y precio Feign",
+      "request": {
+        "metodoPago": "YAPE_PLIN",
+        "detalles": [
+          {
+            "idProducto": 1,
+            "cantidad": 2
+          }
+        ]
+      },
+      "response": {
+        "id": 52,
+        "nombre": "Orden de 3",
+        "descripcion": null,
+        "clienteId": "3",
+        "estado": "PENDIENTE_PAGO",
+        "total": 31,
+        "detalles": [
+          {
+            "id": 52,
+            "nombreProducto": "Producto de prueba",
+            "productoId": 1,
+            "cantidad": 2,
+            "precioUnitario": 15.5,
+            "ordenId": 52
+          }
+        ]
+      },
+      "status": 201
+    },
+    {
+      "prueba": "ADMIN propio permitido",
+      "status": 200,
+      "issuer": "http://localhost:8085",
+      "nota": "Rol agregado solo al usuario nuevo exclusivo de esta prueba"
+    }
+  ],
+  "resultado": "APROBADO",
+  "restauracion": "Se intentó restaurar todos los Resource Servers al issuer final Keycloak"
+}

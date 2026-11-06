@@ -1,0 +1,62 @@
+**********************
+PowerShell transcript start
+Start time: 20261105224226
+Username: STEPHANI\grace
+RunAs User: STEPHANI\grace
+Configuration Name: 
+Machine: STEPHANI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Users\grace\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+Copy-Item -LiteralPath 'C:\Users\grace\Documents\Codex\2026-10-29\oa\work\Verify-Legacy.cjs' -Destination scripts\Verify-Legacy.cjs
+Copy-Item -LiteralPath 'C:\Users\grace\Documents\Codex\2026-10-29\oa\work\Run-Legacy.ps1' -Destination scripts\Run-Legacy.ps1
+& .\scripts\Run-Legacy.ps1
+Process ID: 41532
+PSVersion: 7.6.9
+PSEdition: Core
+GitCommitId: 7.6.9
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu\platform\runtime\evidencias-20261105\s07-legacy-powershell.txt
+Fecha real: 2026-11-05T22:42:26.5842523-05:00 | Windows: STEPHANI\grace
+COMANDO EJECUTADO: node scripts/Verify-Legacy.cjs
+Registro propio {"status":201,"usuario":{"username":"legacy-evidencia-1793936547203","id":3}}
+COMANDO: Service-Personal.ps1 -Name catalogo -Action Restart -Legacy
+pagatu-catalogo-ms detenido (PID 30908).
+pagatu-catalogo-ms listo: http://localhost:8080/actuator/health/liveness | PID 38284
+COMANDO: Service-Personal.ps1 -Name orden -Action Restart -Legacy
+pagatu-orden-ms detenido (PID 944).
+pagatu-orden-ms listo: http://localhost:8082/actuator/health/liveness | PID 36892
+COMANDO: Service-Personal.ps1 -Name cliente -Action Restart -Legacy
+pagatu-cliente-ms detenido (PID 22964).
+pagatu-cliente-ms listo: http://localhost:8083/actuator/health/liveness | PID 32804
+COMANDO: Service-Personal.ps1 -Name gateway -Action Restart -Legacy
+pagatu-gateway detenido (PID 30820).
+pagatu-gateway listo: http://localhost:18080/actuator/health | PID 40004
+Sin JWT {"status":401,"url":"http://localhost:18080/api/v1/ordenes","issuer":"http://localhost:8085"}
+JWT alterado {"status":401,"url":"http://localhost:18080/api/v1/ordenes","issuer":"http://localhost:8085"}
+CLIENTE no es ADMIN {"status":403,"url":"http://localhost:18080/api/v1/clientes","issuer":"http://localhost:8085"}
+Cliente directo JWT alterado {"status":401,"url":"http://localhost:8083/api/v1/clientes","issuer":"http://localhost:8085"}
+Orden directa sin token {"status":401,"url":"http://localhost:8082/api/v1/ordenes","issuer":"http://localhost:8085"}
+Orden con identidad del JWT propio y precio Feign {"request":{"metodoPago":"YAPE_PLIN","detalles":[{"idProducto":1,"cantidad":2}]},"response":{"id":52,"nombre":"Orden de 3","descripcion":null,"clienteId":"3","estado":"PENDIENTE_PAGO","total":31,"detalles":[{"id":52,"nombreProducto":"Producto de prueba","productoId":1,"cantidad":2,"precioUnitario":15.5,"ordenId":52}]},"status":201}
+ADMIN propio permitido {"status":200,"issuer":"http://localhost:8085","nota":"Rol agregado solo al usuario nuevo exclusivo de esta prueba"}
+COMANDO: Service-Personal.ps1 -Name catalogo -Action Restart
+pagatu-catalogo-ms detenido (PID 38284).
+pagatu-catalogo-ms listo: http://localhost:8080/actuator/health/liveness | PID 8264
+COMANDO: Service-Personal.ps1 -Name orden -Action Restart
+pagatu-orden-ms detenido (PID 36892).
+pagatu-orden-ms listo: http://localhost:8082/actuator/health/liveness | PID 37776
+COMANDO: Service-Personal.ps1 -Name cliente -Action Restart
+pagatu-cliente-ms detenido (PID 32804).
+pagatu-cliente-ms listo: http://localhost:8083/actuator/health/liveness | PID 31132
+COMANDO: Service-Personal.ps1 -Name gateway -Action Restart
+pagatu-gateway detenido (PID 40004).
+pagatu-gateway listo: http://localhost:18080/actuator/health | PID 41896
+S07 PROPIO APROBADO; servicios restaurados a Keycloak.
+**********************
+PowerShell transcript end
+End time: 20261105225630
+**********************

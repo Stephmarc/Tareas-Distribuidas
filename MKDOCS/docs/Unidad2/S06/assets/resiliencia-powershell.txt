@@ -1,0 +1,41 @@
+**********************
+PowerShell transcript start
+Start time: 20261105222250
+Username: STEPHANI\grace
+RunAs User: STEPHANI\grace
+Configuration Name: 
+Machine: STEPHANI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Users\grace\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+& 'C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu\scripts\Run-PersonalEvidence.ps1' -Sesion s10
+& 'C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu\scripts\Run-PersonalEvidence.ps1' -Sesion resiliencia
+Process ID: 31616
+PSVersion: 7.6.9
+PSEdition: Core
+GitCommitId: 7.6.9
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu\platform\runtime\evidencias-20261105\resiliencia-powershell.txt
+Estudiante: Jannys Graciela Navarro Acrota | Tarea personal | resiliencia
+Fecha real: 2026-11-05T22:22:50.4072828-05:00 | Windows: STEPHANI\grace
+Directorio de trabajo: C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu
+COMANDO EJECUTADO: & .\scripts\Test-Resiliencia.ps1
+Deteniendo únicamente catálogo para comprobar la caída real...
+
+Recuperando catálogo. No se eliminaron datos.
+PS>TerminatingError(Invoke-RestMethod): "The request was canceled due to the configured HttpClient.Timeout of 3 seconds elapsing."
+PS>TerminatingError(Invoke-RestMethod): "The request was canceled due to the configured HttpClient.Timeout of 3 seconds elapsing."
+PS>TerminatingError(Invoke-RestMethod): "The request was canceled due to the configured HttpClient.Timeout of 3 seconds elapsing."
+PS>TerminatingError(Invoke-RestMethod): "The request was canceled due to the configured HttpClient.Timeout of 3 seconds elapsing."
+PS>TerminatingError(Invoke-RestMethod): "The request was canceled due to the configured HttpClient.Timeout of 3 seconds elapsing."
+PS>TerminatingError(Invoke-RestMethod): "The request was canceled due to the configured HttpClient.Timeout of 3 seconds elapsing."
+
+PRUEBA COMPLETA: catálogo caído, carritos guardados, OPEN, HALF_OPEN y recuperación CLOSED.
+**********************
+PowerShell transcript end
+End time: 20261105222339
+**********************

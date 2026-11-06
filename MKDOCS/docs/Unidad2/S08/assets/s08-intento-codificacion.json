@@ -1,0 +1,9 @@
+{
+  "sesion": "s08",
+  "fecha": "2026-11-06T03:50:39.276Z",
+  "usuarioWindows": "grace",
+  "estudiante": "Jannys Graciela Navarro Acrota",
+  "pasos": [],
+  "resultado": "FALLO",
+  "error": "El PID pertenece a otro proceso; no se toca"
+}

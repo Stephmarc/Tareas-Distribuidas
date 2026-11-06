@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="510" height="260" preserveAspectRatio="xMinYMin meet" viewBox="0 0 510 260" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="510" height="260"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-260)" style="clip-path: url(#clip)">
+		<g transform="">
+			<circle cx="18" cy="130" r="7" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,24%,23%); fill-rule: evenodd;"/>
+			<rect x="100" y="196" width="140" height="42" rx="7" ry="7" style="stroke: rgb(15%,39%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,94%,83%); fill-rule: evenodd;"/>
+			<text x="147.225" y="213" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,24%,23%); stroke:none;" transform="translate(0,426) scale(1,-1)">CARRITO</text>
+			<rect x="100" y="76" width="140" height="42" rx="7" ry="7" style="stroke: rgb(15%,39%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(89%,94%,93%); fill-rule: evenodd;"/>
+			<text x="123.88" y="93" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,24%,23%); stroke:none;" transform="translate(0,186) scale(1,-1)">PENDIENTE_PAGO</text>
+			<rect x="360" y="171" width="140" height="42" rx="7" ry="7" style="stroke: rgb(15%,39%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(86%,93%,89%); fill-rule: evenodd;"/>
+			<text x="408.335" y="188" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,24%,23%); stroke:none;" transform="translate(0,376) scale(1,-1)">PAGADA</text>
+			<rect x="360" y="38" width="140" height="42" rx="7" ry="7" style="stroke: rgb(15%,39%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(97%,88%,87%); fill-rule: evenodd;"/>
+			<text x="398.34" y="55" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,24%,23%); stroke:none;" transform="translate(0,110) scale(1,-1)">CANCELADA</text>
+			<path d="M 26,134 L 100,211 Z" style="stroke: rgb(27%,47%,45%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="100 211, 93.56701 208.2402, 97.49787 204.4625" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(27%,47%,45%); fill-rule: evenodd;"/>
+			<text x="28" y="174" style="font-family: Helvetica; font-size: 8px;fill: rgb(19%,34%,34%); stroke:none;" transform="translate(0,348) scale(1,-1)">sin precio confirmado</text>
+			<path d="M 26,126 L 100,97 Z" style="stroke: rgb(27%,47%,45%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="100 97, 94.9917 101.8905, 93.00246 96.8145" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(27%,47%,45%); fill-rule: evenodd;"/>
+			<text x="28" y="53" style="font-family: Helvetica; font-size: 8px;fill: rgb(19%,34%,34%); stroke:none;" transform="translate(0,106) scale(1,-1)">precio confirmado</text>
+			<path d="M 240,105 L 360,191 Z" style="stroke: rgb(27%,47%,45%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="360 191, 353.1715 189.4599, 356.3473 185.0286" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(27%,47%,45%); fill-rule: evenodd;"/>
+			<text x="260" y="161" style="font-family: Helvetica; font-size: 8px;fill: rgb(19%,34%,34%); stroke:none;" transform="translate(0,322) scale(1,-1)">pago.validado</text>
+			<path d="M 240,90 L 360,59 Z" style="stroke: rgb(27%,47%,45%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="360 59, 354.4393 63.25193, 353.0757 57.97336" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(27%,47%,45%); fill-rule: evenodd;"/>
+			<text x="262" y="59" style="font-family: Helvetica; font-size: 8px;fill: rgb(19%,34%,34%); stroke:none;" transform="translate(0,118) scale(1,-1)">pago.fallido</text>
+			<text x="100" y="244" style="font-family: Helvetica; font-size: 7.4px;fill: rgb(32%,41%,40%); stroke:none;" transform="translate(0,488) scale(1,-1)">Se guarda sin cobro; no se reanuda automáticamente.</text>
+			<text x="100" y="12" style="font-family: Helvetica; font-size: 8px;fill: rgb(32%,41%,40%); stroke:none;" transform="translate(0,24) scale(1,-1)">En estados terminales: evento repetido -&gt; sin cambios.</text>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,122 @@
+{
+  "sesion": "s07",
+  "fecha": "2026-11-06T03:26:35.232Z",
+  "usuarioWindows": "grace",
+  "estudiante": "Jannys Graciela Navarro Acrota",
+  "pasos": [
+    {
+      "prueba": "Cuenta tecnica CLIENTE exclusiva, sin rol ADMIN",
+      "client": "evidencia-personal-cliente"
+    },
+    {
+      "prueba": "Gateway sin token",
+      "url": "http://localhost:18080/api/v1/ordenes",
+      "status": 401
+    },
+    {
+      "prueba": "Gateway firma alterada",
+      "url": "http://localhost:18080/api/v1/ordenes",
+      "status": 401
+    },
+    {
+      "prueba": "Gateway CLIENTE a clientes",
+      "url": "http://localhost:18080/api/v1/clientes",
+      "status": 403
+    },
+    {
+      "prueba": "Gateway ADMIN a clientes",
+      "url": "http://localhost:18080/api/v1/clientes",
+      "status": 200
+    },
+    {
+      "prueba": "Cliente-ms directo firma alterada",
+      "url": "http://localhost:8083/api/v1/clientes",
+      "status": 401
+    },
+    {
+      "prueba": "Cliente-ms directo CLIENTE",
+      "url": "http://localhost:8083/api/v1/clientes",
+      "status": 403
+    },
+    {
+      "prueba": "Orden-ms directo sin token",
+      "url": "http://localhost:8082/api/v1/ordenes",
+      "status": 401
+    },
+    {
+      "prueba": "POST orden autenticada",
+      "status": 201,
+      "request": {
+        "metodoPago": "YAPE_PLIN",
+        "detalles": [
+          {
+            "idProducto": 1,
+            "cantidad": 2
+          }
+        ]
+      },
+      "response": {
+        "id": 44,
+        "nombre": "Orden de 9dca6917-56f0-4abc-9f00-3b0495848e74",
+        "descripcion": null,
+        "clienteId": "9dca6917-56f0-4abc-9f00-3b0495848e74",
+        "estado": "PENDIENTE_PAGO",
+        "total": 31,
+        "detalles": [
+          {
+            "id": 44,
+            "nombreProducto": "Producto de prueba",
+            "productoId": 1,
+            "cantidad": 2,
+            "precioUnitario": 15.5,
+            "ordenId": 44
+          }
+        ]
+      },
+      "trace": "personal-s07-d76bb045-774b-4797-835d-1cd54f5ba794"
+    },
+    {
+      "prueba": "Identidad procede de sub firmado, sin clienteId en request",
+      "subject": "9dca6917-56f0-4abc-9f00-3b0495848e74",
+      "clienteIdRespuesta": "9dca6917-56f0-4abc-9f00-3b0495848e74"
+    },
+    {
+      "prueba": "POST orden autenticada",
+      "status": 201,
+      "request": {
+        "metodoPago": "YAPE_PLIN",
+        "detalles": [
+          {
+            "idProducto": 1,
+            "cantidad": 2
+          }
+        ]
+      },
+      "response": {
+        "id": 45,
+        "nombre": "Orden de 891b60fa-0606-48a7-bd4c-7ef9ed5eabdf",
+        "descripcion": null,
+        "clienteId": "891b60fa-0606-48a7-bd4c-7ef9ed5eabdf",
+        "estado": "PENDIENTE_PAGO",
+        "total": 31,
+        "detalles": [
+          {
+            "id": 45,
+            "nombreProducto": "Producto de prueba",
+            "productoId": 1,
+            "cantidad": 2,
+            "precioUnitario": 15.5,
+            "ordenId": 45
+          }
+        ]
+      },
+      "trace": "personal-s07-df67c656-f897-4b7f-b7cd-da54164bf05f"
+    },
+    {
+      "prueba": "CLIENTE no consulta orden de otro usuario",
+      "status": 403,
+      "ordenAjena": 45
+    }
+  ],
+  "resultado": "APROBADO"
+}

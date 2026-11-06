@@ -1,0 +1,686 @@
+[
+  {
+    "archivo": "evidencias/20261105/build-powershell.txt",
+    "sha256": "7a75b6f59c8c41b8a67fdba0f2d89e1e66c874e564a5b1bfaf5be6de5a68eda1"
+  },
+  {
+    "archivo": "evidencias/20261105/maven-surefire.json",
+    "sha256": "efaff1b5f6c3ce66b01a428dcdf3b5b75be5c548e1033b8df56abec699d71357"
+  },
+  {
+    "archivo": "evidencias/20261105/setup.json",
+    "sha256": "2a83363c25d0599aa461124933c8056df515b791c6932533aceaaa5597e495ec"
+  },
+  {
+    "archivo": "evidencias/autenticacion-temporal.json",
+    "sha256": "ff9b50fecffa6172d060f976645b65eece1c3b155a078760e3ec816662757d13"
+  },
+  {
+    "archivo": "evidencias/circuit-breaker.json",
+    "sha256": "6bd4b5f040ae6eea534086be69b69e9af3da8923b59305f6e264ec79cccda936"
+  },
+  {
+    "archivo": "evidencias/compilacion-java.txt",
+    "sha256": "e5885d92aa6afe95bdfa444ef5e8fe113ca0f86fe5b450d2d0cd6739deb366a2"
+  },
+  {
+    "archivo": "evidencias/duplicados.txt",
+    "sha256": "732563180422d9ebc76442e0ed1516668d86b8ebf96b50b88e83e9d913a5b4d7"
+  },
+  {
+    "archivo": "evidencias/estados-pago.json",
+    "sha256": "6205157a3d7358ca8dc7850428e4a046dd24b59967630b03a8dffa51cd1183bb"
+  },
+  {
+    "archivo": "evidencias/pruebas-api.json",
+    "sha256": "c01c2d71aa32cb6251732170e819b38413f8ad9afcbf8a60bdab116d9f4c4dba"
+  },
+  {
+    "archivo": "evidencias/resiliencia-real.json",
+    "sha256": "14f2ea6f26d501ef97c8fe91cf5718887592f00cc6a5ebac80ee105fcf488869"
+  },
+  {
+    "archivo": "evidencias/trazabilidad.txt",
+    "sha256": "ff7bf40767c8e95647c8e965bbfb9a888d1b92aca53be1e1b443fcb62f3d1f38"
+  },
+  {
+    "archivo": "S06/assets/eureka-servicios.jpg",
+    "sha256": "85ec90949d6581654445a1bb0f6ceea51dfbb9431f1326391e4d72edeb7e10fc"
+  },
+  {
+    "archivo": "S06/assets/resiliencia-powershell.txt",
+    "sha256": "55a5ccdeb35fcc9ac10a5778150ca6068490cb2d3f73d1b73d9bcd3de415ab15"
+  },
+  {
+    "archivo": "S06/assets/resiliencia-real.json",
+    "sha256": "31e75c3f3617c253bd7bac3b0f6346f10022daa5b304963bd94b2e2b0fa24db1"
+  },
+  {
+    "archivo": "S06/assets/S06-circuit-breaker-codigo.jpg",
+    "sha256": "3d3a40c26a80d83d1d40cdcc69576ab246e03634bc0792ed4703a0385c509e1b"
+  },
+  {
+    "archivo": "S06/assets/s06-powershell.txt",
+    "sha256": "476588904cf2a56608d11db85abdc850c1037b4dcd0da1af1d28218f5fe15d4f"
+  },
+  {
+    "archivo": "S06/assets/s06.json",
+    "sha256": "9ea14c88d574d49636f0dcb87d11cad8b70ad304352ccca51d9f57e81f2d38e2"
+  },
+  {
+    "archivo": "S06/S06_Equipo09_NavarroJannys.pdf",
+    "sha256": "dfe4b5672af5153958c759c12c028199a549cb738046e769a0fc187d56e0c4c0"
+  },
+  {
+    "archivo": "S07/assets/auth-powershell.txt",
+    "sha256": "af92b7c68918f4f109f28ec5a38c134f7cd82b652c9dd5804b520bd025cea54b"
+  },
+  {
+    "archivo": "S07/assets/S07-auth-codigo.jpg",
+    "sha256": "99dd6335f357891dc34afa17a515abefcb3ee1bd8f0fb5381f06ed88c6ea155f"
+  },
+  {
+    "archivo": "S07/assets/s07-auth.json",
+    "sha256": "4b8e8bd580032e2f07e9fd5d84ca84fee8d177ba0f0a2c6b66e41acfe4acb9bd"
+  },
+  {
+    "archivo": "S07/assets/s07-legacy-powershell.txt",
+    "sha256": "c1e1bce813a31359aecb23f6f2249de4b8f253743f51358174d29bfcf411e005"
+  },
+  {
+    "archivo": "S07/assets/s07-legacy.json",
+    "sha256": "175430f0b814ad3de99919eb906b736693e18e50e462ead268faa12c4af30704"
+  },
+  {
+    "archivo": "S07/assets/s07-powershell.txt",
+    "sha256": "93c6eef7c4d192fc070ef82b674fc414536c6e9ddffce2051e8c276fb7dd483c"
+  },
+  {
+    "archivo": "S07/assets/s07.json",
+    "sha256": "7195b920495e20737556e833ffa3b3fdc4cdec9d334ca95033471f9fb92620e2"
+  },
+  {
+    "archivo": "S07/S07_Equipo09_NavarroJannys.pdf",
+    "sha256": "f66705263085e9db0959dc56256b5bbff9c889ee82989b837555c3a97c76fd31"
+  },
+  {
+    "archivo": "S08/assets/kafka-topics.jpg",
+    "sha256": "964ea2640ad92ee523ac36ae054a272bdf0dc41a7f9965d3dbf7984e9bea4924"
+  },
+  {
+    "archivo": "S08/assets/s08-intento-codificacion-powershell.txt",
+    "sha256": "bb6034e86627f516893f342fa777643951e8429f98d7496c81cd274987905c78"
+  },
+  {
+    "archivo": "S08/assets/s08-intento-codificacion.json",
+    "sha256": "77236fc98acf2a5c3aeaa0b859650b49fb4bf82bd121d9430f6b6c58ea1a9265"
+  },
+  {
+    "archivo": "S08/assets/S08-mensaje.jpg",
+    "sha256": "7e6f37432affb08f15dc8824e3bd4db800c7aa3d73cc479db609a683cf44def4"
+  },
+  {
+    "archivo": "S08/assets/s08-powershell.txt",
+    "sha256": "eee529813cf3b9801c0b10009436da0ee71b8066569290685fad0b18114e85ce"
+  },
+  {
+    "archivo": "S08/assets/S08-topics.jpg",
+    "sha256": "b53b04a539879d7099ecc519b918acc90cd59abf303a49ead5cfa04a1d6e47a1"
+  },
+  {
+    "archivo": "S08/assets/s08.json",
+    "sha256": "694377e020426fc281333abaa9de1e7e3f0ccaaee6f134e29c327f5e5d84d0ba"
+  },
+  {
+    "archivo": "S08/S08_Equipo09_NavarroJannys.pdf",
+    "sha256": "6b76bc5a41ca0d0229bc712a2c631168d1b69b9959ae1d6739d307a435294ce1"
+  },
+  {
+    "archivo": "S09/assets/estados-orden.svg",
+    "sha256": "1fad705d949862e8c3af8b03012647f9a2973715f3f1c29de181263c11d65f4f"
+  },
+  {
+    "archivo": "S09/assets/S09-compensacion-kafka.jpg",
+    "sha256": "ae97a257af7530073716293f636740aa695a0c5b9085812339c22f3ab6c1136b"
+  },
+  {
+    "archivo": "S09/assets/s09-intento-emisor-propio-powershell.txt",
+    "sha256": "0fe69e0699b705d779d88e97122ff115b7ef16fd9d45d6ad30bfdc709760c4e7"
+  },
+  {
+    "archivo": "S09/assets/s09-intento-emisor-propio.json",
+    "sha256": "54d3b0f43356adde5a8cfdcf40fe8acf404bb96b4781a076f26d8bf42b11383a"
+  },
+  {
+    "archivo": "S09/assets/s09-powershell.txt",
+    "sha256": "287c4d228bc1e51c8f787dd7289794fd0542cbc0e4ee513b740b1d9a2615d381"
+  },
+  {
+    "archivo": "S09/assets/s09-primera-aprobada.json",
+    "sha256": "14a2fec1fc2d8b0c0625fa1f1e56c66e273b7027ac77fa38533cacedc245a91b"
+  },
+  {
+    "archivo": "S09/assets/s09.json",
+    "sha256": "2e0017cd135b4d89bad73d0aa523b6f69ea0db7a88dd73b3914a9891897e11a5"
+  },
+  {
+    "archivo": "S09/S09_Equipo09_NavarroJannys.pdf",
+    "sha256": "5603ad35225137ae2cec4c775908efec9338daa3a52ed14a02649df3bc2c2555"
+  },
+  {
+    "archivo": "S10/assets/grafana-metricas-logs.jpg",
+    "sha256": "14507c01fc44ec703250b11701661c267f77be027014f3d2b67aa2929abb37c3"
+  },
+  {
+    "archivo": "S10/assets/S10-grafana.jpg",
+    "sha256": "63017feb862d663cbafba4e876f409a9483a040883bfc735ae9271455480df51"
+  },
+  {
+    "archivo": "S10/assets/s10-powershell.txt",
+    "sha256": "fcea064e31bf8a318ad855c9284725755eb743bc6518cb452d2e34581a5f620d"
+  },
+  {
+    "archivo": "S10/assets/s10.json",
+    "sha256": "3053db2436a2a46694431e1ec605ed19e78ea81db7b5b84c457d05d24f9c5272"
+  },
+  {
+    "archivo": "S10/S10_Equipo09_NavarroJannys.pdf",
+    "sha256": "a5b2546e76bfd3564ad31cf51f68bdf57440a36d83de68a57411224fcb6a43ed"
+  },
+  {
+    "archivo": "S11/assets/pedidos-pagada-cancelada.jpg",
+    "sha256": "c6c50ab0a4d28b21d8f60b709fcec7c83b7982db8cd4b820a35545d27e72146f"
+  },
+  {
+    "archivo": "S11/assets/S11-pendiente.jpg",
+    "sha256": "357845a51e74150790e95219b66c53c7ea72af1a4126318f4fac6f666a1e8302"
+  },
+  {
+    "archivo": "S11/assets/S11-pkce.jpg",
+    "sha256": "958b0da239d28e143a7e3bde36abaa8c3179cafaee4edc379dcdca15dbddd532"
+  },
+  {
+    "archivo": "S11/assets/s11-pkce.json",
+    "sha256": "2c5478d2bcf9077ff10b6e0c62566878ecc898f39ef3c2e4032f89ed35bc89a4"
+  },
+  {
+    "archivo": "S11/assets/S11-resultados.jpg",
+    "sha256": "912fbbde9e0cd32735e628d20067beed82fd71455bd6303fe0fe14f967c219eb"
+  },
+  {
+    "archivo": "S11/assets/s11.json",
+    "sha256": "4ceb881932f0531532e49c27f3c904361722de2926dca1a065f0952a8bdfd0c4"
+  },
+  {
+    "archivo": "S11/S11_Equipo09_NavarroJannys.pdf",
+    "sha256": "dc7da481dfc7c60b2197449bcb4d9c2acd901f2e9dd2f129da64b3ea17dfeab2"
+  },
+  {
+    "codigo": "Services/pagatu-auth-ms/src/main/java/pe/edu/upeu/auth/Application.java",
+    "sha256": "89653bee01710f3d58fddb0e5e1b524571c511850e435974c7d128e1e5728092"
+  },
+  {
+    "codigo": "Services/pagatu-auth-ms/src/main/java/pe/edu/upeu/auth/AuthController.java",
+    "sha256": "13114cbb6f92d1cd4a2aa746242a2fe79988433de83d00dba0d750ee5c7d09c5"
+  },
+  {
+    "codigo": "Services/pagatu-auth-ms/src/main/java/pe/edu/upeu/auth/SecurityConfiguration.java",
+    "sha256": "64844428bfce4df2441887b601c7989205aa489e3665193d9f270b8930d814d1"
+  },
+  {
+    "codigo": "Services/pagatu-auth-ms/src/main/java/pe/edu/upeu/auth/Usuario.java",
+    "sha256": "657a6562a935587552a74d63b24fe50d9ae638896ee5995c455258273ba4a7cc"
+  },
+  {
+    "codigo": "Services/pagatu-auth-ms/src/main/java/pe/edu/upeu/auth/UsuarioRepository.java",
+    "sha256": "2675dacecf74756e972940d52d94495b2bc08e8de5a9e330708ca0b85ad12f16"
+  },
+  {
+    "codigo": "Services/pagatu-catalogo-ms/src/main/java/pe/edu/upeu/catalogo/Application.java",
+    "sha256": "46a4653daf118dd4991387da411a2bb734b86bda2b99ec36bd4a7f064b4213ae"
+  },
+  {
+    "codigo": "Services/pagatu-catalogo-ms/src/main/java/pe/edu/upeu/catalogo/CatalogoController.java",
+    "sha256": "edb8173b1852f98bcf329f588a83c43367ca40f23e44c3ed58fdf866bff84d49"
+  },
+  {
+    "codigo": "Services/pagatu-catalogo-ms/src/main/java/pe/edu/upeu/catalogo/CorrelationIdFilter.java",
+    "sha256": "c704e214fd94fa6feca1c39b26970342e6eccd404f1110a53234e152d337fcab"
+  },
+  {
+    "codigo": "Services/pagatu-catalogo-ms/src/main/java/pe/edu/upeu/catalogo/dto/ProductoRequest.java",
+    "sha256": "c6700ec14fdd93ecb001d580df7f3164075f2fb7292662a399e84b213413f015"
+  },
+  {
+    "codigo": "Services/pagatu-catalogo-ms/src/main/java/pe/edu/upeu/catalogo/dto/ProductoResponse.java",
+    "sha256": "e59ce2a45f3072a672c7100e7f276228285f080a4a71af772d61d7711599aa32"
+  },
+  {
+    "codigo": "Services/pagatu-catalogo-ms/src/main/java/pe/edu/upeu/catalogo/entity/Categoria.java",
+    "sha256": "50187e29f1ea28edc0d0f5a004caede7fdec61bac80f3a07b042f2600030d506"
+  },
+  {
+    "codigo": "Services/pagatu-catalogo-ms/src/main/java/pe/edu/upeu/catalogo/entity/Producto.java",
+    "sha256": "f462c3eed53dcf3cccc17be2fe32701d25b78ad6335ccbcb45fa92a451695640"
+  },
+  {
+    "codigo": "Services/pagatu-catalogo-ms/src/main/java/pe/edu/upeu/catalogo/mapper/CategoriaMapper.java",
+    "sha256": "637e8c1c32b56653dd89cf9ef47d0f2e4eeaa421b681538e7d8718617a1033da"
+  },
+  {
+    "codigo": "Services/pagatu-catalogo-ms/src/main/java/pe/edu/upeu/catalogo/mapper/ProductoMapper.java",
+    "sha256": "efe92c6e5769b0eceddc620dc9d88854823b67317fac21385b2b7059ed2559c4"
+  },
+  {
+    "codigo": "Services/pagatu-catalogo-ms/src/main/java/pe/edu/upeu/catalogo/ProductoRepository.java",
+    "sha256": "75146b68af5ad7cf961664ce6e100b7589965fb92e8818b4ea0538d4ca2dd354"
+  },
+  {
+    "codigo": "Services/pagatu-catalogo-ms/src/main/java/pe/edu/upeu/catalogo/SecurityConfiguration.java",
+    "sha256": "a871080b7d4578f07aeceae2ce8ebef026acca88991e544948fa6a0aff6e911c"
+  },
+  {
+    "codigo": "Services/pagatu-cliente-ms/src/main/java/pe/edu/upeu/cliente/Application.java",
+    "sha256": "2669315ac76c44cc91875d7f3bdf01ad74dec44bda330f2687cd4f5bcef8ecce"
+  },
+  {
+    "codigo": "Services/pagatu-cliente-ms/src/main/java/pe/edu/upeu/cliente/Cliente.java",
+    "sha256": "474d5830399119645571b4dbaab4831f20b80e5f915a3c8bfac0596cfedeb58a"
+  },
+  {
+    "codigo": "Services/pagatu-cliente-ms/src/main/java/pe/edu/upeu/cliente/ClienteController.java",
+    "sha256": "d4a940473b5e502fceaed65fbcc26f3f76edfb35820492eddb1a27a7152d9b07"
+  },
+  {
+    "codigo": "Services/pagatu-cliente-ms/src/main/java/pe/edu/upeu/cliente/ClienteRepository.java",
+    "sha256": "cd6c4b34d42d20ff3af496cf2178829f61f20075c8243f3336fbcb13f19f36b4"
+  },
+  {
+    "codigo": "Services/pagatu-cliente-ms/src/main/java/pe/edu/upeu/cliente/ClienteService.java",
+    "sha256": "4ed3b769536353f11f0d517f1b0f5c59d2dee47e57db532c855fb10ea8fdafdb"
+  },
+  {
+    "codigo": "Services/pagatu-cliente-ms/src/main/java/pe/edu/upeu/cliente/CorrelationIdFilter.java",
+    "sha256": "d506e7790fcc634b361027589f3b9b05f32eb0c308c3c30cab7a5594e72603de"
+  },
+  {
+    "codigo": "Services/pagatu-cliente-ms/src/main/java/pe/edu/upeu/cliente/event/AvisoListener.java",
+    "sha256": "abc3214b105c6ba9df081a3921229de2c3c985d3130151766172911791cb06ce"
+  },
+  {
+    "codigo": "Services/pagatu-cliente-ms/src/main/java/pe/edu/upeu/cliente/event/Evento.java",
+    "sha256": "0de072df6ae39bcb9a656e67802d2a0517dcd81ba0de052746f5ec7d6f39f1d8"
+  },
+  {
+    "codigo": "Services/pagatu-cliente-ms/src/main/java/pe/edu/upeu/cliente/event/Outbox.java",
+    "sha256": "c3eca68b39c943069caaa378323991722e91ce4be78617b6251eb009bc45e02b"
+  },
+  {
+    "codigo": "Services/pagatu-cliente-ms/src/main/java/pe/edu/upeu/cliente/event/OutboxRepository.java",
+    "sha256": "7538adc29665351a955ec83354b75fbb4d9aa51afe123cd5a18fd0a13328914a"
+  },
+  {
+    "codigo": "Services/pagatu-cliente-ms/src/main/java/pe/edu/upeu/cliente/event/OutboxService.java",
+    "sha256": "3cb76c5f08c3740783d462221649f728adccbe3124f28df21ac69f2131187d07"
+  },
+  {
+    "codigo": "Services/pagatu-cliente-ms/src/main/java/pe/edu/upeu/cliente/SecurityConfiguration.java",
+    "sha256": "9544e90213958634e090bbc88d0b3bee8ee2fd35d84cbe0d944e49c16e9dc2b1"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/client/ProductoClient.java",
+    "sha256": "19052677750a617cbb8edc611ee51bea5bf68e1f8d541ad119db539c4a125554"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/config/FeignConfiguration.java",
+    "sha256": "0952f883bf30cfbad56acbafd5aee03ce26be7e631392dea3f2101eb049c9b6e"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/config/SecurityConfiguration.java",
+    "sha256": "8323a1e435e2fa02ef3813af40d71ee25c4f87b2c16fe1fa5e7e23084b539d77"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/controller/DetalleOrdenController.java",
+    "sha256": "87a81dc4ccd89b67693d2a78f91890c346278c82f36dd62ef0abc049146bdaf1"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/controller/OrdenController.java",
+    "sha256": "0ec05e67073a1a0cb6ddee9852407934d25760bbd701877ce47ff4331f487eb8"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/controller/SaludoController.java",
+    "sha256": "d31fabdfb59c796330aea279f8fc651eee754c60e3e4f78db1b9ae81953c4f92"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/dto/CrearOrdenRequest.java",
+    "sha256": "d548225521d5dc30cf9dbe6a7971fd52bf2ff34669a4c2fccccb687b73fc5d77"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/dto/DetalleOrdenRequest.java",
+    "sha256": "6ddb7eb6447afe7f465f251f542a44d9a0e7949ceb90f01b373cc6e0b58e1592"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/dto/DetalleOrdenResponse.java",
+    "sha256": "e13371767601299ee0eaadbbbbfa1a6abc23b1d9cf7c0a7d718846b560bd87ee"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/dto/OrdenRequest.java",
+    "sha256": "2992f215f9f3399ee375040e5c10ff33cbf2f250fec7c1ae1d6bb06b848840c6"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/dto/OrdenResponse.java",
+    "sha256": "f19faca2e2cc75406ef0f2b41333f73dcac245d7e3ec46a3f1c7ee4cb00e2886"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/entity/DetalleOrden.java",
+    "sha256": "8fd2f33811df4e7ab1fcdcc57193d3d2ef9462204d9c17b542d2adfc54a24386"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/entity/Orden.java",
+    "sha256": "06c9215557556a7080960276e611c450ca0e251f8b24ceecc3773ac30786cb1e"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/event/Evento.java",
+    "sha256": "9d24a855f5eb8358d08258f0638381f05cdb341bb1f55c68fa2f8915c0e5bfe0"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/event/Outbox.java",
+    "sha256": "c8c0c9dfefbcc6750ca1b25a76efa3a812e242762bcfa197a4367ab63298b3c9"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/event/OutboxRepository.java",
+    "sha256": "6db0b941885d2513c76da7c361c1d7363c872e6db833d85d35d365974a76c06d"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/event/OutboxService.java",
+    "sha256": "4aeb4a2c27226961d6d0a07996baf698201abbd8e31874e594fe8270aa9828bf"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/event/PagoListener.java",
+    "sha256": "abe4eb674170f76e781bb89cf34ec3e3e7dfe8869a2461c3d370ba3e79ef02f3"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/exception/GlobalExceptionHandler.java",
+    "sha256": "343c885b9a373874b3a48b1ac6a6d54f2067c92a22df17ccda4e239e0c435586"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/exception/ResourceNotFoundException.java",
+    "sha256": "7c21c1b8357acf0483b86bc227d668dfc779cfb8c64a5b5ae7499799f5c96c34"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/filter/CorrelationIdFilter.java",
+    "sha256": "645a7bb19d99e91f248091b677ce5bebbbd1000ccbfae2a78d816fb2a5ca15e1"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/mapper/DetalleOrdenMapper.java",
+    "sha256": "b186694bec07a783f9dc0c51a05c5fb0473ce26d4ecdf85d2d3612045739d6e1"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/mapper/OrdenMapper.java",
+    "sha256": "c7d67545d64d854b04600900be0e5610448161534b908fabdd6b50dcecccdeb4"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/PagatuOrdenMsApplication.java",
+    "sha256": "ca297518afd13cd37d85e76ff5b918cd349b0d091ef149169bd35c959a6ea5e0"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/repository/DetalleOrdenRepository.java",
+    "sha256": "bccfbf964b5794155d51fe479ae14e75d3a23ab1cdd9d5de0e7ed3d0d6b5b897"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/repository/OrdenRepository.java",
+    "sha256": "eca333f566caa45175e58dd23fc0fc4c34d10cfe1bee2a477474976d0c04fdf5"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/service/DetalleOrdenService.java",
+    "sha256": "a6983fab4836bf687fb0e08cdc1349da6cb90a22cdb2f888d37fb70200ca155f"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/service/OrdenService.java",
+    "sha256": "c0596d3f13e0477e26128183c61efaaec8dda413d478d2103c83fba680c42906"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/service/ProductoConsultaService.java",
+    "sha256": "a5f0e265e153836ec0c7c588af1c2df0165a9a555c9fc240cccd770dc603d47a"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/java/pe/edu/upeu/orden/service/RegistroOrdenService.java",
+    "sha256": "2a0f450acd0a133130e1c088c7af7e6c22b83636c2f639fbb57d6785e2bd8840"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/test/java/pe/edu/upeu/orden/PagatuOrdenMsApplicationTests.java",
+    "sha256": "d44af54a229279c3a799d41a5bd6deb8e015eea18240e51f54f6104343c5ecf4"
+  },
+  {
+    "codigo": "Services/pagatu-pago-ms/src/main/java/pe/edu/upeu/pago/Application.java",
+    "sha256": "297855c6b1a89956c26e6333900c1a6fd16382f5c6c15ff1e65f0c917b3f1acc"
+  },
+  {
+    "codigo": "Services/pagatu-pago-ms/src/main/java/pe/edu/upeu/pago/CorrelationIdFilter.java",
+    "sha256": "6303e8e3923b1b3ea08f4cd1ea98281b8a1237989980202612a2e61d90f92450"
+  },
+  {
+    "codigo": "Services/pagatu-pago-ms/src/main/java/pe/edu/upeu/pago/event/Evento.java",
+    "sha256": "288e5ba7c2b031c4e59a0cb1016ecddae4116a678f6e90e484fa8762d30e7937"
+  },
+  {
+    "codigo": "Services/pagatu-pago-ms/src/main/java/pe/edu/upeu/pago/event/OrdenListener.java",
+    "sha256": "d8814b21a52f7a19787b0353fd8db8135df72e2374d5ca7685b09ee6ab5ad2ac"
+  },
+  {
+    "codigo": "Services/pagatu-pago-ms/src/main/java/pe/edu/upeu/pago/event/Outbox.java",
+    "sha256": "f1bf57b65bbaf15492d0a061e361fdf06a43120d34a93e087c4568abffa7ee8c"
+  },
+  {
+    "codigo": "Services/pagatu-pago-ms/src/main/java/pe/edu/upeu/pago/event/OutboxRepository.java",
+    "sha256": "c463ca323226fdbc0c626793a2679ebcaa133a7368eb8fd84c05267245a02489"
+  },
+  {
+    "codigo": "Services/pagatu-pago-ms/src/main/java/pe/edu/upeu/pago/event/OutboxService.java",
+    "sha256": "5fb1cc45aa0bdb6ca38a8a7e018d9cc6365bf8cf74efaa8c70073f7b68a9e3b6"
+  },
+  {
+    "codigo": "Services/pagatu-pago-ms/src/main/java/pe/edu/upeu/pago/PagoController.java",
+    "sha256": "e380d63177116ed4fe3907627fb9b92ab1ba014e857757825f302fedaf60c732"
+  },
+  {
+    "codigo": "Services/pagatu-pago-ms/src/main/java/pe/edu/upeu/pago/SecurityConfiguration.java",
+    "sha256": "5e4c914f00df4af3b1eed14262fdf0ec4fa02361f1a18a81140796641b352af6"
+  },
+  {
+    "codigo": "Services/pagatu-auth-ms/src/main/resources/db/migration/V1__usuarios_roles.sql",
+    "sha256": "ed4349bea4c5ba3bbe33fbe953c00abc1da6522298a20d9cc4403764b24e29de"
+  },
+  {
+    "codigo": "Services/pagatu-catalogo-ms/src/main/resources/db/migration/V1__catalogo.sql",
+    "sha256": "8cf6b66ddebb01d250d1fc1bfdc1b5fa3b7798e141438c947409e095007aae12"
+  },
+  {
+    "codigo": "Services/pagatu-cliente-ms/src/main/resources/db/migration/V1__cliente.sql",
+    "sha256": "08acba6464a6d3a0314ecc40c6abb57f0ada3ab24624c6a30d3110ef934b0113"
+  },
+  {
+    "codigo": "Services/pagatu-cliente-ms/src/main/resources/db/migration/V2__eventos_outbox.sql",
+    "sha256": "43ea5dc0d32297fad818e60edc5f6117e89380f23c5adf858135dd7b8d9b188b"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/resources/db/migration/V1__create_orden_tables.sql",
+    "sha256": "dfedb917f601d6543dd89baf9693945564475af0d836fafdb99e9e023c2d4f9a"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/resources/db/migration/V2__resiliencia_identidad.sql",
+    "sha256": "886da5efd198c20db2c6ca3299187e98883faa0015414f14a8bbb37bf13fb03d"
+  },
+  {
+    "codigo": "Services/pagatu-orden-ms/src/main/resources/db/migration/V3__eventos_outbox.sql",
+    "sha256": "0390be7e772959e0cfa947e68976575c415825d05ac53c1ea02a7f6381debae5"
+  },
+  {
+    "codigo": "Services/pagatu-pago-ms/src/main/resources/db/migration/V1__pagos.sql",
+    "sha256": "6ccbd16b774a02a93f3e32fb4b649750c6e22f4d593f1c23e9b5e9e6c0719d88"
+  },
+  {
+    "codigo": "Services/pagatu-pago-ms/src/main/resources/db/migration/V2__eventos_outbox.sql",
+    "sha256": "0390be7e772959e0cfa947e68976575c415825d05ac53c1ea02a7f6381debae5"
+  },
+  {
+    "codigo": "Infra/pagatu-config/src/main/java/pe/edu/upeu/config/PagatuConfigApplication.java",
+    "sha256": "ce14a63c5d27010ca09e428ff7f3e155149d5464add0b99e1fad3b4903e942eb"
+  },
+  {
+    "codigo": "Infra/pagatu-eureka/src/main/java/pe/edu/upeu/eureka/PagatuEurekaApplication.java",
+    "sha256": "233f18a6bc8936ed489eb050a784694accb39e0d37286aa4a3e360a05831e30b"
+  },
+  {
+    "codigo": "Infra/pagatu-gateway/src/main/java/pe/edu/upeu/gateway/Application.java",
+    "sha256": "b886204f7cfa23a3bd4dbddf9679b5924c2cabd68e55b23298e4a44d027e5a80"
+  },
+  {
+    "codigo": "Infra/pagatu-gateway/src/main/java/pe/edu/upeu/gateway/SecurityConfiguration.java",
+    "sha256": "b2040318901fbb5504f6cfc8c0a12601bb4aefb77d5bd3ad2cb315a87b9d6d56"
+  },
+  {
+    "codigo": "Infra/pagatu-config/config-repo/pagatu-auth-ms-dev.yml",
+    "sha256": "9934d59b2746b0490926c17d356dec6c92a11bf13adbc549b13b180bbc226540"
+  },
+  {
+    "codigo": "Infra/pagatu-config/config-repo/pagatu-catalogo-ms-dev.yml",
+    "sha256": "36300e27196c13d88eff02f69d91212e9b7909a41342dbf0a5896591a9e3ab9d"
+  },
+  {
+    "codigo": "Infra/pagatu-config/config-repo/pagatu-cliente-ms-dev.yml",
+    "sha256": "56386ddb2c6b04779d7b4c5c4d5dde0b8f59f5951e1f16eda8d0b4be65727046"
+  },
+  {
+    "codigo": "Infra/pagatu-config/config-repo/pagatu-eureka-dev.yml",
+    "sha256": "563c7163a05b33dbb312736c6d9cc8c4f7cf7a5714eb4645d3c8ec903e2612b8"
+  },
+  {
+    "codigo": "Infra/pagatu-config/config-repo/pagatu-eureka-prod.yml",
+    "sha256": "c6a5211a81ba7559f790a6d9693d55175e53714955374742d4b075256decdedd"
+  },
+  {
+    "codigo": "Infra/pagatu-config/config-repo/pagatu-gateway-dev.yml",
+    "sha256": "d6aaba0feddf8052ba1436f809cb62d6f9ef9a15d74b4be6b98f4808f0f3ef65"
+  },
+  {
+    "codigo": "Infra/pagatu-config/config-repo/pagatu-orden-ms-dev.yml",
+    "sha256": "d48ff3be639cf1763f3e678b3d431efdabdac9680ec2d8d3915617f8128137cf"
+  },
+  {
+    "codigo": "Infra/pagatu-config/config-repo/pagatu-orden-ms-prod.yml",
+    "sha256": "b835b829f910e01e17277ed1c3369fb40dbd935cebc47e7fa276c96b6f748343"
+  },
+  {
+    "codigo": "Infra/pagatu-config/config-repo/pagatu-pago-ms-dev.yml",
+    "sha256": "60129cbe3e14bb1d19b9837f7f66a4bdc2325f2c4a6b419dbf85eee6b219c1ac"
+  },
+  {
+    "codigo": "Infra/pagatu-config/src/main/resources/application.yml",
+    "sha256": "71029a26fef9f3899fae74e27cc6707ccaf554ceccc283453430c5b397c249d3"
+  },
+  {
+    "codigo": "Infra/pagatu-eureka/src/main/resources/application.yml",
+    "sha256": "7254bec309216f865dbfda1e403fd9165b8bc35f38fa8bac93c0de6bfa2d0e95"
+  },
+  {
+    "codigo": "Infra/pagatu-gateway/src/main/resources/application.yml",
+    "sha256": "7d6418bac8e1aa7f03ff8863c202f44ac76cda762eaa4ee0239d3b8c9db718a1"
+  },
+  {
+    "codigo": "clients/pagatu-frontend/src/index.html",
+    "sha256": "62ff2ad17137323b1efdee2bd3a1125c6eaad20913a7acadaf42aa631e361e92"
+  },
+  {
+    "codigo": "clients/pagatu-frontend/src/main.ts",
+    "sha256": "a5eb48dd1bc1a1ac320d21286dccdbc9a1f2a06341f9996729ab5951a30c128b"
+  },
+  {
+    "codigo": "clients/pagatu-frontend/src/pkce-evidence.ts",
+    "sha256": "5cda6be50d9736d6882f65ea3756adbd2b15bf3772d7dd43ba06d0be2e8879f6"
+  },
+  {
+    "codigo": "clients/pagatu-frontend/src/styles.css",
+    "sha256": "f21881f8988e510a9459831d418e3e6a673767bd865bd5dfe3589c8b09ec56d4"
+  },
+  {
+    "codigo": "scripts/PersonalRuntime.cjs",
+    "sha256": "9b0ca48f37f24057097953de88bd682aa12e17d4251968ac5ff49a351aa0a849"
+  },
+  {
+    "codigo": "scripts/Publish-Personal.ps1",
+    "sha256": "392a4b8dc94939912a398058de4d6309651f11bf3faf6c5d6d1071c5f4a3fc19"
+  },
+  {
+    "codigo": "scripts/Recover-Personal.cjs",
+    "sha256": "1aa60671d8f19a68d7e2632a5121c21223aa48f1d36c1423dc071db8b6188907"
+  },
+  {
+    "codigo": "scripts/Repair-Kafka.ps1",
+    "sha256": "a1952ada6346a01424aeaf602135492ba53e8329136ebb2c5617df5c48446b2b"
+  },
+  {
+    "codigo": "scripts/Run-Legacy.ps1",
+    "sha256": "d876e90830f473c53c1a50e0fb9677b12dd237f7f624be2e47602b7416e255ba"
+  },
+  {
+    "codigo": "scripts/Run-PersonalEvidence.ps1",
+    "sha256": "6f36c44921641539220442afeaf6fcf7e24075e0da1bcec21e0f7013f2e2456b"
+  },
+  {
+    "codigo": "scripts/Service-Personal.ps1",
+    "sha256": "412603c053031e95b27d3543c319806ab140cddcd0d9734fbd7c456dd88c7087"
+  },
+  {
+    "codigo": "scripts/Start-Dev.ps1",
+    "sha256": "5fef981b02c03d47d9ed3735031c6abdc0211c0403d593e61f9ac340fbe4ff94"
+  },
+  {
+    "codigo": "scripts/Test-Resiliencia.ps1",
+    "sha256": "c73620321d0062151bddcd81de659e5af0f74058ba01740aadd560737d793d88"
+  },
+  {
+    "codigo": "scripts/Verify-Auth.cjs",
+    "sha256": "e1e2bb39735ca07d91f0b3c6b07186719d8a3178a881244c4e3677d228e730ec"
+  },
+  {
+    "codigo": "scripts/Verify-Build.ps1",
+    "sha256": "0742e4748d858499d81416465363572f643dc3121a6f83d3890418091b6e651d"
+  },
+  {
+    "codigo": "scripts/Verify-Frontend.cjs",
+    "sha256": "53a34d56d2621765c6ad0a2424784cd4629fddd0832f095c8ffa0aa59f731a5e"
+  },
+  {
+    "codigo": "scripts/Verify-Legacy.cjs",
+    "sha256": "2a723677c278ec33c4ad60a2e5c46cc9b05bfbe508c56a87457a67d6f449b7ab"
+  },
+  {
+    "codigo": "scripts/Verify-Personal.cjs",
+    "sha256": "426c468983f033c7242f9d105e138916d79e61baf106dcddd8b2722f680836ff"
+  },
+  {
+    "codigo": "scripts/Verify-Resilience.cjs",
+    "sha256": "f19c5f040a11fe57717b24a8d7dcb74cd25ce6a9d658c22b2f1eb2e56feeb4ee"
+  },
+  {
+    "codigo": "scripts/Verify-Unit1.cjs",
+    "sha256": "ba4d94eec41becc3224bc5e9dd6882471a5a472f2c0ffe76662e253564dcdc39"
+  },
+  {
+    "codigo": "scripts/Verify-Unit1.ps1",
+    "sha256": "231f1d8764b0a40cefeda7b4b956ac7e500f88970f208a2f45b99f89bcb4f58e"
+  },
+  {
+    "codigo": "tools/evidence-clock/extension.cjs",
+    "sha256": "6d094c2fa84d472377661eafec9f4b00db2bb545ba264aedaf5319d7f5b809bd"
+  },
+  {
+    "codigo": "tools/evidence-clock/package.json",
+    "sha256": "cb0635897b3965f89fd7851fecf58673a25c05a3d38e8eeedf745e1df7fdc791"
+  },
+  {
+    "codigo": "tools/evidence-clock/README.md",
+    "sha256": "662c875f9f58c37bbbeca522bb178dbb061705fe298a43199fb161e7b6cfa48c"
+  }
+]

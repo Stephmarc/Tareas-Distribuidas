@@ -1,0 +1,17 @@
+{
+  "sesion": "setup",
+  "fecha": "2026-11-06T03:56:26.628Z",
+  "usuarioWindows": "grace",
+  "estudiante": "Jannys Graciela Navarro Acrota",
+  "pasos": [
+    {
+      "prueba": "Cuenta tecnica ADMIN local preparada sin publicar secreto",
+      "client": "verificacion-local"
+    },
+    {
+      "prueba": "Cuenta tecnica CLIENTE exclusiva, sin rol ADMIN",
+      "client": "evidencia-personal-cliente"
+    }
+  ],
+  "resultado": "APROBADO"
+}

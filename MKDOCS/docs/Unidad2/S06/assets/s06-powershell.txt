@@ -1,0 +1,46 @@
+**********************
+PowerShell transcript start
+Start time: 20261105222630
+Username: STEPHANI\grace
+RunAs User: STEPHANI\grace
+Configuration Name: 
+Machine: STEPHANI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Users\grace\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+& 'C:\Users\grace\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' 'C:\Users\grace\Documents\Codex\2026-10-29\oa\work\fix-evidence-transcript.py'
+& .\scripts\Run-PersonalEvidence.ps1 -Sesion s06
+& .\scripts\Run-PersonalEvidence.ps1 -Sesion s07
+& .\scripts\Run-PersonalEvidence.ps1 -Sesion s08
+& .\scripts\Run-PersonalEvidence.ps1 -Sesion s09
+& .\scripts\Run-PersonalEvidence.ps1 -Sesion s10
+Process ID: 36240
+PSVersion: 7.6.9
+PSEdition: Core
+GitCommitId: 7.6.9
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu\platform\runtime\evidencias-20261105\s06-powershell.txt
+Estudiante: Jannys Graciela Navarro Acrota | Tarea personal | s06
+Fecha real: 2026-11-05T22:26:30.7707047-05:00 | Windows: STEPHANI\grace
+Directorio de trabajo: C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu
+COMANDO EJECUTADO: node scripts/Verify-Personal.cjs s06
+TAREA PERSONAL · S06 · 5/11/2026, 22:26:31 · Windows: grace
+VERIFICADO: Orden y cliente registrados en Eureka {"aplicaciones":["PAGATU-PAGO-MS","PAGATU-GATEWAY","PAGATU-CATALOGO-MS","PAGATU-ORDEN-MS","PAGATU-CLIENTE-MS"]}
+VERIFICADO: Configuracion externa pagatu-orden-ms {"status":200,"fuentes":["file:config-repo/pagatu-orden-ms-dev.yml"]}
+VERIFICADO: Configuracion externa pagatu-cliente-ms {"status":200,"fuentes":["file:config-repo/pagatu-cliente-ms-dev.yml"]}
+VERIFICADO: POST orden autenticada {"status":201,"request":{"metodoPago":"YAPE_PLIN","detalles":[{"idProducto":1,"cantidad":2}]},"response":{"id":43,"nombre":"Orden de 891b60fa-0606-48a7-bd4c-7ef9ed5eabdf","descripcion":null,"clienteId":"891b60fa-0606-48a7-bd4c-7ef9ed5eabdf","estado":"PENDIENTE_PAGO","total":31,"detalles":[{"id":43,"nombreProducto":"Producto de prueba","productoId":1,"cantidad":2,"precioUnitario":15.5,"ordenId":43}]},"trace":"personal-s06-9f0b1360-831a-4c3a-b52c-fe255c862b77"}
+VERIFICADO: Feign obtiene precio real: 2 x 15.50 {"total":31}
+VERIFICADO: Cliente-ms CRUD crear {"status":201,"response":{"id":3,"nombre":"Cliente practica personal 1793935592521","documento":"DOC-DEMO"}}
+VERIFICADO: Cliente-ms CRUD actualizar {"status":200,"response":{"id":3,"nombre":"Cliente evidencia actualizado","documento":"DOC-DEMO"}}
+VERIFICADO: Cliente-ms CRUD consultar {"status":200,"response":{"id":3,"nombre":"Cliente evidencia actualizado","documento":"DOC-DEMO"}}
+VERIFICADO: Cliente-ms CRUD eliminar registro exclusivo {"status":204,"id":3}
+VERIFICADO: Estado final de orden 43 {"estado":"PAGADA","total":31}
+REPORTE: platform/runtime/evidencias-20261105/s06.json
+**********************
+PowerShell transcript end
+End time: 20261105222634
+**********************

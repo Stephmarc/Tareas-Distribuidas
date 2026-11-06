@@ -1,0 +1,9 @@
+{
+  "sesion": "s09",
+  "fecha": "2026-11-06T03:44:31.841Z",
+  "usuarioWindows": "grace",
+  "estudiante": "Jannys Graciela Navarro Acrota",
+  "pasos": [],
+  "resultado": "FALLO",
+  "error": "POST orden autenticada {\"status\":401,\"request\":{\"metodoPago\":\"YAPE_PLIN\",\"detalles\":[{\"idProducto\":1,\"cantidad\":2}]},\"response\":\"\",\"trace\":\"personal-s09-785816e2-91d6-4f4d-9e88-ab49ff262a21\"}"
+}

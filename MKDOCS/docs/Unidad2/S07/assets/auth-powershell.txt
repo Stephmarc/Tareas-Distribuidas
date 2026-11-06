@@ -1,0 +1,36 @@
+**********************
+PowerShell transcript start
+Start time: 20261105222657
+Username: STEPHANI\grace
+RunAs User: STEPHANI\grace
+Configuration Name: 
+Machine: STEPHANI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Users\grace\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+& .\scripts\Run-PersonalEvidence.ps1 -Sesion auth
+& 'C:\Users\grace\AppData\Local\Programs\Microsoft VS Code\bin\code.cmd' --reuse-window --user-data-dir 'C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu\platform\runtime\vscode-evidence' --goto 'C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu\platform\runtime\evidencias-20261105\s07-powershell.txt:35'
+Process ID: 30824
+PSVersion: 7.6.9
+PSEdition: Core
+GitCommitId: 7.6.9
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu\platform\runtime\evidencias-20261105\auth-powershell.txt
+Estudiante: Jannys Graciela Navarro Acrota | Tarea personal | auth
+Fecha real: 2026-11-05T22:26:57.5024648-05:00 | Windows: STEPHANI\grace
+Directorio de trabajo: C:\Users\grace\MicroServicios\Sesiòn 1\Pagatu
+COMANDO EJECUTADO: node scripts/Verify-Auth.cjs
+S07 auth propio · 5/11/2026, 22:26:57 · Windows: grace
+Registro HTTP 201 {"status":201,"data":{"username":"personal-1793935617701","id":2}}
+Login incorrecto HTTP 401 {"status":401,"data":{"timestamp":"2026-11-06T03:26:58.218Z","status":401,"error":"Unauthorized","path":"/api/v1/auth/login"}}
+Login correcto HTTP 200 {"status":200,"token_type":"Bearer","expires_in":900,"nota":"JWT completo omitido para no publicar credenciales"}
+Firma RS256 verificada con JWKS publico {"header":{"kid":"27beea61-afa5-4ed4-97c0-ed3f67662a79","alg":"RS256"},"claims":{"iss":"http://localhost:8085","sub":"2","idCliente":"2","realm_access":{"roles":["CLIENTE"]},"exp":1793936518,"iat":1793935618},"jwksPublico":{"keys":[{"kty":"RSA","e":"AQAB","kid":"27beea61-afa5-4ed4-97c0-ed3f67662a79","n":"ihfOFqyLgQEEJtsYcWKV_lOtlQs8Oi8pyFApdFFcB8PBmLwDcUdFFfTjRlllbLE-VjUBhs2OKxcGpf5i_nd3kUktFiezP7XqBol7gN6spDC_rDSaHQir8dpTh6MtE4rEl52PxWxSaFtfBeVtAJXJdXOyu7SavZERr12rV0TBVFlJKSPVz0ndD6OCVaMQS9AQMmZ3apLrq_pibtFpPCx-66Raz7_K2Rwk7seWqHzlwAoy4F3GImiiS8OZ1GTe01H-dEU4Re4jywZQiKqr6zD-PxkOu7ATPxhuF1YcmItbTITJO5uFlXkwzhNo2XrBnKmjZex7JNNY53PTjV7cI5V1yQ"}]}}
+Tablas y hash BCrypt real de usuario exclusivo {"usuarios":"2|personal-1793935617701|$2a$10$.uLJUGyNQ5wiIlB1VC4S..9xLLzqQz9zUaHFH3aLPWaCd0Icbfipe","roles":"ADMIN\nCLIENTE","usuario_roles":"2|CLIENTE"}
+**********************
+PowerShell transcript end
+End time: 20261105222659
+**********************
