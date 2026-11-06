@@ -1,0 +1,7 @@
+
+# Evidencias originales: conservar los bytes de capturas y transcripts.
+MKDOCS/docs/Unidad1/assets/** -text
+MKDOCS/docs/Unidad2/S*/assets/** -text
+MKDOCS/docs/Unidad2/evidencias/** -text
+*.pdf binary
+*.jpg binary

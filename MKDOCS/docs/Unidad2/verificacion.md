@@ -33,3 +33,7 @@ Se documentan pruebas locales reproducibles. No se inventa una nota, participaci
 ## Preparación y reproducción
 
 [Pasos completos de ejecución](reproduccion.md). La verificación técnica usa cuentas locales de prueba, cuyos secretos se guardan fuera de Git.
+
+## Integridad de archivos
+
+Git conserva los bytes originales de capturas, PDF, transcripts y reportes mediante `.gitattributes`. Los hashes de evidencia se calculan sobre esos bytes. Para el código, `sha256NormalizadoLF` normaliza CRLF a LF antes de calcular SHA256; así el resultado coincide entre Windows y GitHub.
